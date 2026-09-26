@@ -26,8 +26,8 @@ def outline_size(points):
 	return max(x for x, _ in points), max(y for _, y in points)
 
 
-def make_target_outline():
-	vertex_count = random.randint(10, 15)
+def make_target_outline(piece_count):
+	vertex_count = max(16, piece_count * 5)
 	center_x = BOARD_COLUMNS / 2
 	center_y = BOARD_ROWS / 2
 	radius_x = random.uniform(2.05, 2.55)
@@ -114,7 +114,7 @@ def triangles_share_side(first_triangle, second_triangle):
 	return False
 
 
-def slice_into_pieces(triangles, piece_count):
+def slice_into_pieces(triangles, piece_count, minimum_area):
 	adjacency = [set() for _ in triangles]
 	for first_index in range(len(triangles)):
 		for second_index in range(first_index + 1, len(triangles)):
@@ -124,6 +124,10 @@ def slice_into_pieces(triangles, piece_count):
 	if any(not neighbors for neighbors in adjacency):
 		raise ValueError("Target mesh contains an isolated triangle")
 
+	triangle_areas = [abs(polygon_area(triangle)) for triangle in triangles]
+	total_area = sum(triangle_areas)
+	maximum_area = total_area / piece_count * 1.8
+	average_area = total_area / piece_count
 	seeds = random.sample(range(len(triangles)), piece_count)
 	owners = {seed: group for group, seed in enumerate(seeds)}
 	frontier = deque(seeds)
@@ -135,6 +139,63 @@ def slice_into_pieces(triangles, piece_count):
 			if neighbor not in owners:
 				owners[neighbor] = owners[triangle_index]
 				frontier.append(neighbor)
+
+	group_members = [set() for _ in range(piece_count)]
+	group_areas = [0.0] * piece_count
+	for triangle_index, group in owners.items():
+		group_members[group].add(triangle_index)
+		group_areas[group] += triangle_areas[triangle_index]
+
+	def donor_stays_connected(donor, removed):
+		remaining = group_members[donor] - {removed}
+		if len(remaining) < 2:
+			return True
+		visited = {next(iter(remaining))}
+		pending = list(visited)
+		while pending:
+			current = pending.pop()
+			for neighbor in adjacency[current] & remaining - visited:
+				visited.add(neighbor)
+				pending.append(neighbor)
+		return len(visited) == len(remaining)
+
+	for _ in range(len(triangles) * piece_count):
+		if all(minimum_area <= area <= maximum_area for area in group_areas):
+			break
+		best_move = None
+		for donor in range(piece_count):
+			for triangle_index in group_members[donor]:
+				for neighbor in adjacency[triangle_index]:
+					receiver = owners[neighbor]
+					if receiver == donor:
+						continue
+					new_donor_area = group_areas[donor] - triangle_areas[triangle_index]
+					new_receiver_area = group_areas[receiver] + triangle_areas[triangle_index]
+					if new_donor_area < minimum_area or new_receiver_area > maximum_area:
+						continue
+					old_error = ((group_areas[donor] - average_area) ** 2
+								 + (group_areas[receiver] - average_area) ** 2)
+					new_error = ((new_donor_area - average_area) ** 2
+								 + (new_receiver_area - average_area) ** 2)
+					improvement = old_error - new_error
+					if improvement <= 0 or not donor_stays_connected(donor, triangle_index):
+						continue
+					score = improvement + random.random() * average_area ** 2 * 0.01
+					if best_move is None or score > best_move[0]:
+						best_move = (score, triangle_index, donor, receiver,
+									 new_donor_area, new_receiver_area)
+		if best_move is None:
+			return None
+		_, triangle_index, donor, receiver, donor_area, receiver_area = best_move
+		owners[triangle_index] = receiver
+		group_members[donor].remove(triangle_index)
+		group_members[receiver].add(triangle_index)
+		group_areas[donor] = donor_area
+		group_areas[receiver] = receiver_area
+	else:
+		return None
+	if any(not minimum_area <= area <= maximum_area for area in group_areas):
+		return None
 
 	pieces = [[] for _ in range(piece_count)]
 	for triangle_index, triangle in enumerate(triangles):
@@ -219,16 +280,31 @@ class ShapeShift:
 		self.root.bind("<KeyPress-Escape>", lambda _event: self._toggle_pause())
 
 	def _load_puzzle(self):
-		self.target_outline = make_target_outline()
+		piece_count = self.puzzle + 3
+		self.target_outline = make_target_outline(piece_count)
 		self.target_triangles = triangulate_polygon(self.target_outline)
 		mesh_vertices = {point for triangle in self.target_triangles for point in triangle}
-		while True:
-			piece_count = random.randint(3, min(6, max(3, len(self.target_triangles) // 4)))
-			triangle_groups = slice_into_pieces(self.target_triangles, piece_count)
+		target_area = abs(polygon_area(self.target_outline))
+		average_piece_area = target_area / piece_count
+		minimum_piece_area = average_piece_area * 0.4
+		maximum_piece_area = average_piece_area * 1.8
+		for _ in range(500):
+			triangle_groups = slice_into_pieces(
+				self.target_triangles, piece_count, minimum_piece_area
+			)
+			if triangle_groups is None:
+				continue
+			piece_areas = [
+				sum(abs(polygon_area(triangle)) for triangle in group)
+				for group in triangle_groups
+			]
 			signature = partition_signature(triangle_groups)
-			if signature != self.last_cut_signature:
+			if (signature != self.last_cut_signature
+					and all(minimum_piece_area <= area <= maximum_piece_area for area in piece_areas)):
 				self.last_cut_signature = signature
 				break
+		else:
+			raise RuntimeError("Could not generate a balanced connected piece layout")
 		self.pieces = []
 		self.goal_anchors = []
 		self.goal_rotations = []
