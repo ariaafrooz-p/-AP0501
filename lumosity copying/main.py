@@ -1,26 +1,13 @@
 import tkinter as tk
 import math
+import random
+from collections import deque
 
 
 WINDOW_TITLE = "Shape Shift"
 BOARD_COLUMNS = 8
 BOARD_ROWS = 7
-BASE_SHAPES = (
-	tuple((1 + math.cos(2 * math.pi * step / 48),
-		   1 + math.sin(2 * math.pi * step / 48)) for step in range(48)),
-	((0.8, 0), (3, 0), (2.2, 2), (0, 2)),
-	((0, 0), (2.4, 0)) + tuple(
-		(2.4 * math.cos(math.pi * step / 48), 2.4 * math.sin(math.pi * step / 48))
-		for step in range(25)
-	),
-)
-PUZZLE_POSES = (
-	(((0, 2), 0), ((2, 2), 0), ((5, 4), 0)),
-	(((0, 1), 0), ((4, 0), 1), ((5, 4), 0)),
-	(((6, 0), 0), ((0, 4), 2), ((4, 1), 1)),
-	(((3, 0), 0), ((0, 2), 3), ((5, 4), 3)),
-)
-PIECE_COLORS = ("#19c6dc", "#37d0dc", "#00b8cf")
+PIECE_COLORS = ("#19c6dc", "#39d4df", "#09b9cc", "#f5c451", "#f17660", "#80d99c")
 
 
 def rotated_outline(points, turns):
@@ -37,6 +24,161 @@ def rotated_outline(points, turns):
 
 def outline_size(points):
 	return max(x for x, _ in points), max(y for _, y in points)
+
+
+def make_target_outline():
+	vertex_count = random.randint(10, 15)
+	center_x = BOARD_COLUMNS / 2
+	center_y = BOARD_ROWS / 2
+	radius_x = random.uniform(2.05, 2.55)
+	radius_y = random.uniform(1.9, 2.65)
+	phase = random.uniform(0, 2 * math.pi)
+	points = []
+	for index in range(vertex_count):
+		angle = phase + 2 * math.pi * index / vertex_count
+		radius = random.uniform(0.68, 1.0)
+		points.append((
+			round(center_x + radius_x * radius * math.cos(angle), 5),
+			round(center_y + radius_y * radius * math.sin(angle), 5),
+		))
+	return tuple(points)
+
+
+def polygon_area(points):
+	return sum(
+		points[index][0] * points[(index + 1) % len(points)][1]
+		- points[(index + 1) % len(points)][0] * points[index][1]
+		for index in range(len(points))
+	) / 2
+
+
+def cross_product(origin, first, second):
+	return (first[0] - origin[0]) * (second[1] - origin[1]) - (first[1] - origin[1]) * (second[0] - origin[0])
+
+
+def point_in_triangle(point, first, second, third):
+	return all(
+		cross_product(start, end, point) >= -1e-8
+		for start, end in ((first, second), (second, third), (third, first))
+	)
+
+
+def triangulate_polygon(points):
+	vertices = list(points)
+	if polygon_area(vertices) < 0:
+		vertices.reverse()
+	remaining = list(range(len(vertices)))
+	triangles = []
+	while len(remaining) > 3:
+		for position, current in enumerate(remaining):
+			previous = remaining[position - 1]
+			following = remaining[(position + 1) % len(remaining)]
+			triangle = (vertices[previous], vertices[current], vertices[following])
+			if cross_product(*triangle) <= 1e-8:
+				continue
+			if any(
+				point_in_triangle(vertices[other], *triangle)
+				for other in remaining
+				if other not in (previous, current, following)
+			):
+				continue
+			triangles.append(triangle)
+			remaining.pop(position)
+			break
+		else:
+			raise ValueError("Could not slice the target outline into triangles")
+	triangles.append(tuple(vertices[index] for index in remaining))
+	return triangles
+
+
+def triangles_share_side(first_triangle, second_triangle):
+	for first_index, first_start in enumerate(first_triangle):
+		first_end = first_triangle[(first_index + 1) % 3]
+		first_dx = first_end[0] - first_start[0]
+		first_dy = first_end[1] - first_start[1]
+		first_length = math.hypot(first_dx, first_dy)
+		for second_index, second_start in enumerate(second_triangle):
+			second_end = second_triangle[(second_index + 1) % 3]
+			if abs(cross_product(first_start, first_end, second_start)) > 1e-7:
+				continue
+			if abs(cross_product(first_start, first_end, second_end)) > 1e-7:
+				continue
+			if abs(first_dx) >= abs(first_dy):
+				first_interval = sorted((first_start[0], first_end[0]))
+				second_interval = sorted((second_start[0], second_end[0]))
+			else:
+				first_interval = sorted((first_start[1], first_end[1]))
+				second_interval = sorted((second_start[1], second_end[1]))
+			if min(first_interval[1], second_interval[1]) - max(first_interval[0], second_interval[0]) > 1e-7:
+				return True
+	return False
+
+
+def slice_into_pieces(triangles, piece_count):
+	adjacency = [set() for _ in triangles]
+	for first_index in range(len(triangles)):
+		for second_index in range(first_index + 1, len(triangles)):
+			if triangles_share_side(triangles[first_index], triangles[second_index]):
+				adjacency[first_index].add(second_index)
+				adjacency[second_index].add(first_index)
+	if any(not neighbors for neighbors in adjacency):
+		raise ValueError("Target mesh contains an isolated triangle")
+
+	seeds = random.sample(range(len(triangles)), piece_count)
+	owners = {seed: group for group, seed in enumerate(seeds)}
+	frontier = deque(seeds)
+	while frontier:
+		triangle_index = frontier.popleft()
+		neighbors = list(adjacency[triangle_index])
+		random.shuffle(neighbors)
+		for neighbor in neighbors:
+			if neighbor not in owners:
+				owners[neighbor] = owners[triangle_index]
+				frontier.append(neighbor)
+
+	pieces = [[] for _ in range(piece_count)]
+	for triangle_index, triangle in enumerate(triangles):
+		pieces[owners[triangle_index]].append(triangle)
+	return pieces
+
+
+def mesh_boundary_edges(triangles, all_vertices):
+	edge_counts = {}
+	edge_points = {}
+	for triangle in triangles:
+		for edge_index, start in enumerate(triangle):
+			end = triangle[(edge_index + 1) % 3]
+			dx = end[0] - start[0]
+			dy = end[1] - start[1]
+			length_squared = dx * dx + dy * dy
+			points = []
+			for point in all_vertices:
+				cross = dx * (point[1] - start[1]) - dy * (point[0] - start[0])
+				if abs(cross) > 1e-6 * max(1, math.sqrt(length_squared)):
+					continue
+				parameter = ((point[0] - start[0]) * dx + (point[1] - start[1]) * dy) / length_squared
+				if -1e-7 <= parameter <= 1 + 1e-7:
+					points.append((parameter, point))
+			points.sort(key=lambda item: item[0])
+			for (_, first), (_, second) in zip(points, points[1:]):
+				if math.dist(first, second) < 1e-7:
+					continue
+				key = tuple(sorted((tuple(round(value, 7) for value in first),
+									 tuple(round(value, 7) for value in second))))
+				edge_counts[key] = edge_counts.get(key, 0) + 1
+				edge_points[key] = (first, second)
+	return [edge_points[key] for key, count in edge_counts.items() if count == 1]
+
+
+def partition_signature(groups):
+	canonical_groups = []
+	for group in groups:
+		canonical_triangles = [
+			tuple(sorted((round(x, 7), round(y, 7)) for x, y in triangle))
+			for triangle in group
+		]
+		canonical_groups.append(tuple(sorted(canonical_triangles)))
+	return tuple(sorted(canonical_groups))
 
 
 class ShapeShift:
@@ -63,6 +205,7 @@ class ShapeShift:
 		self.controls = {}
 		self.goal_anchors = []
 		self.goal_rotations = []
+		self.last_cut_signature = None
 		self._load_puzzle()
 
 		self.canvas.bind("<Configure>", self._draw)
@@ -76,19 +219,50 @@ class ShapeShift:
 		self.root.bind("<KeyPress-Escape>", lambda _event: self._toggle_pause())
 
 	def _load_puzzle(self):
-		poses = PUZZLE_POSES[self.puzzle]
-		self.goal_anchors = [anchor for anchor, _ in poses]
-		self.goal_rotations = [rotation for _, rotation in poses]
+		self.target_outline = make_target_outline()
+		self.target_triangles = triangulate_polygon(self.target_outline)
+		mesh_vertices = {point for triangle in self.target_triangles for point in triangle}
+		while True:
+			piece_count = random.randint(3, min(6, max(3, len(self.target_triangles) // 4)))
+			triangle_groups = slice_into_pieces(self.target_triangles, piece_count)
+			signature = partition_signature(triangle_groups)
+			if signature != self.last_cut_signature:
+				self.last_cut_signature = signature
+				break
+		self.pieces = []
+		self.goal_anchors = []
+		self.goal_rotations = []
+		for group in triangle_groups:
+			vertices = [point for triangle in group for point in triangle]
+			min_x = min(x for x, _ in vertices)
+			min_y = min(y for _, y in vertices)
+			local_triangles = [
+				tuple((round(x - min_x, 7), round(y - min_y, 7)) for x, y in triangle)
+				for triangle in group
+			]
+			local_vertices = {
+				(round(x - min_x, 7), round(y - min_y, 7))
+				for x, y in mesh_vertices
+			}
+			self.pieces.append({
+				"triangles": local_triangles,
+				"boundary": mesh_boundary_edges(local_triangles, local_vertices),
+				"size": (max(x for x, _ in vertices) - min_x,
+						 max(y for _, y in vertices) - min_y),
+			})
+			self.goal_anchors.append((min_x, min_y))
+			self.goal_rotations.append(0)
+		self.rotations = [random.randint(1, 3) for _ in self.pieces]
 
 	def _layout(self):
 		width = max(1, self.canvas.winfo_width())
 		height = max(1, self.canvas.winfo_height())
-		cell = min(66, (height - 330) / BOARD_ROWS, (width - 80) / BOARD_COLUMNS)
-		cell = max(44, cell)
+		cell = min(82, (height - 190) / BOARD_ROWS, (width - 24) / 12.4)
+		cell = max(48, cell)
 		board_width = cell * BOARD_COLUMNS
 		board_height = cell * BOARD_ROWS
 		board_x = (width - board_width) / 2
-		board_y = 100
+		board_y = 70
 		tray_y = board_y + board_height + 20
 		return width, height, cell, board_x, board_y, tray_y
 
@@ -101,7 +275,7 @@ class ShapeShift:
 		self._draw_background(width, height)
 		self._draw_header(width)
 		self._draw_board(cell, board_x, board_y)
-		self._draw_tray(width, height, cell, tray_y)
+		self._draw_tray(width, height, cell, board_x, board_y)
 		self._draw_footer(width, height)
 
 		if self.paused or self.won:
@@ -123,7 +297,7 @@ class ShapeShift:
 		canvas.create_text(72, 31, text="SHAPE SHIFT", anchor="w", fill="#fff1cb",
 						   font=("Segoe UI", 16, "bold"))
 		canvas.create_rectangle(width - 300, 0, width - 152, 62, fill="#f6c875", outline="#b66a13")
-		canvas.create_text(width - 226, 31, text=f"PUZZLE  {self.puzzle + 1} / 4",
+		canvas.create_text(width - 226, 31, text=f"PUZZLE  {self.puzzle + 1}",
 						   fill="#653800", font=("Segoe UI", 13, "bold"))
 		canvas.create_rectangle(width - 152, 0, width, 62, fill="#f6c875", outline="#b66a13")
 		canvas.create_text(width - 76, 17, text="SCORE", fill="#80501a", font=("Segoe UI", 10, "bold"))
@@ -148,74 +322,105 @@ class ShapeShift:
 				canvas.create_rectangle(x1, y1, x1 + cell, y1 + cell,
 									fill=fill, outline="#1b2d6e", width=2)
 
-		for index, (anchor, rotation) in enumerate(zip(self.goal_anchors, self.goal_rotations)):
-			self._draw_shape(index, anchor, rotation, cell, board_x, board_y,
-							 "#111a3a", outline="#5265a5", width=2)
+		self._draw_outline(self.target_outline, cell, board_x, board_y,
+						"#111a3a", outline="#111a3a")
 
 		for index, (anchor, rotation) in self.placed.items():
-			self._draw_shape(index, anchor, rotation, cell, board_x, board_y,
-							 PIECE_COLORS[index], outline="#e7fbff", width=3)
+			self._draw_piece(index, anchor, rotation, cell, board_x, board_y,
+						  PIECE_COLORS[index % len(PIECE_COLORS)], "#e7fbff")
 
 		if self.selected is not None and self.hover_cell is not None and not self.won:
 			index = self.selected
-			anchor = self.hover_cell
+			anchor = self._preview_anchor(index, self.hover_cell)
 			valid = self._pose_is_goal(index, anchor, self.rotations[index])
-			self._draw_shape(index, anchor, self.rotations[index], cell, board_x, board_y,
-							 "#40dfeb" if valid else "#e95747", outline="#e7fbff",
-							 width=2, stipple="gray50")
+			self._draw_piece(index, anchor, self.rotations[index], cell, board_x, board_y,
+						  "#40dfeb" if valid else "#e95747", "#e7fbff", stipple="gray50")
 
-	def _draw_shape(self, index, anchor, rotation, scale, origin_x, origin_y,
-					 color, outline, width=2, stipple=None):
-		points = rotated_outline(BASE_SHAPES[index], rotation)
+	def _transform_point(self, index, point, anchor, rotation):
+		x, y = point
+		width, height = self.pieces[index]["size"]
+		for _ in range(rotation % 4):
+			x, y = height - y, x
+			width, height = height, width
+		return anchor[0] + x, anchor[1] + y
+
+	def _draw_piece(self, index, anchor, rotation, scale, origin_x, origin_y,
+					 color, outline, stipple=None):
+		piece = self.pieces[index]
+		for triangle in piece["triangles"]:
+			coordinates = []
+			for point in triangle:
+				x, y = self._transform_point(index, point, anchor, rotation)
+				coordinates.extend((origin_x + x * scale, origin_y + y * scale))
+			options = {"fill": color, "outline": color, "width": 1}
+			if stipple:
+				options["stipple"] = stipple
+			self.canvas.create_polygon(*coordinates, **options)
+		for start, end in piece["boundary"]:
+			first = self._transform_point(index, start, anchor, rotation)
+			second = self._transform_point(index, end, anchor, rotation)
+			self.canvas.create_line(
+				origin_x + first[0] * scale, origin_y + first[1] * scale,
+				origin_x + second[0] * scale, origin_y + second[1] * scale,
+				fill=outline, width=3, capstyle=tk.ROUND,
+			)
+
+	def _preview_anchor(self, index, anchor):
+		goal = self.goal_anchors[index]
+		if (abs(anchor[0] - goal[0]) <= 0.45 and abs(anchor[1] - goal[1]) <= 0.45
+				and self.rotations[index] % 4 == self.goal_rotations[index]):
+			return goal
+		return anchor
+
+	def _draw_outline(self, points, scale, origin_x, origin_y, color, outline):
 		coordinates = []
 		for x, y in points:
-			coordinates.extend((origin_x + (anchor[0] + x) * scale,
-								origin_y + (anchor[1] + y) * scale))
-		options = {"fill": color, "outline": outline, "width": width}
-		if stipple:
-			options["stipple"] = stipple
-		self.canvas.create_polygon(*coordinates, **options)
+			coordinates.extend((origin_x + x * scale, origin_y + y * scale))
+		self.canvas.create_polygon(*coordinates, fill=color, outline=outline, width=1)
 
 	def _pose_is_goal(self, index, anchor, rotation):
-		if anchor != self.goal_anchors[index]:
-			return False
-		return index == 0 or rotation % 4 == self.goal_rotations[index]
+		goal = self.goal_anchors[index]
+		return (
+			abs(anchor[0] - goal[0]) <= 0.45
+			and abs(anchor[1] - goal[1]) <= 0.45
+			and rotation % 4 == self.goal_rotations[index]
+		)
 
-	def _draw_tray(self, width, height, cell, tray_y):
+	def _draw_tray(self, width, height, cell, board_x, board_y):
 		canvas = self.canvas
-		canvas.create_text(width / 2, tray_y, text=self.message, fill="#fff0d0",
-						   font=("Segoe UI", 11, "bold"))
-		slot_top = tray_y + 18
-		slot_bottom = min(slot_top + 91, height - 106)
-		slot_width = min(178, (width - 60) / 3)
-		gap = 12
-		total = slot_width * 3 + gap * 2
-		start_x = (width - total) / 2
-		for index, _shape in enumerate(BASE_SHAPES):
-			x1 = start_x + index * (slot_width + gap)
-			x2 = x1 + slot_width
-			selected = index == self.selected
-			canvas.create_rectangle(x1, slot_top, x2, slot_bottom,
-									fill="#803f08" if selected else "#a95705",
-									outline="#f6c875" if selected else "#c57815", width=3 if selected else 2)
-			if index in self.placed:
-				canvas.create_text((x1 + x2) / 2, (slot_top + slot_bottom) / 2,
-								   text="PLACED", fill="#d5b582", font=("Segoe UI", 11, "bold"))
-			else:
-				points = rotated_outline(BASE_SHAPES[index], self.rotations[index])
-				shape_width, shape_height = outline_size(points)
-				icon_scale = min(20, 58 / max(shape_width, shape_height))
-				origin_x = (x1 + x2 - shape_width * icon_scale) / 2
-				origin_y = (slot_top + slot_bottom - shape_height * icon_scale) / 2 - 4
-				self._draw_shape(index, (0, 0), self.rotations[index], icon_scale,
-							 origin_x, origin_y, PIECE_COLORS[index], outline="#e7fbff", width=2)
-			canvas.create_text((x1 + x2) / 2, slot_bottom - 10, text=f"PIECE {index + 1}",
-							   fill="#ffe1a8", font=("Segoe UI", 8, "bold"))
-			self.controls[f"piece_{index}"] = (x1, slot_top, x2, slot_bottom)
+		board_right = board_x + BOARD_COLUMNS * cell
+		remaining = [index for index in range(len(self.pieces)) if index not in self.placed]
+		columns = (remaining[::2], remaining[1::2])
+		for side, indexes in enumerate(columns):
+			if not indexes:
+				continue
+			slot_height = BOARD_ROWS * cell / len(indexes)
+			margin_width = board_x - 22 if side == 0 else width - board_right - 22
+			for slot, index in enumerate(indexes):
+				piece = self.pieces[index]
+				piece_width, piece_height = piece["size"]
+				if self.rotations[index] % 2:
+					piece_width, piece_height = piece_height, piece_width
+				display_scale = min(
+					cell,
+					max(20, margin_width - 12) / max(piece_width, 0.1),
+					(slot_height - 12) / max(piece_height, 0.1),
+				)
+				shape_width = piece_width * display_scale
+				shape_height = piece_height * display_scale
+				origin_x = board_x - 10 - shape_width if side == 0 else board_right + 10
+				origin_y = board_y + slot * slot_height + (slot_height - shape_height) / 2
+				self._draw_piece(index, (0, 0), self.rotations[index], display_scale,
+							 origin_x, origin_y, PIECE_COLORS[index % len(PIECE_COLORS)], "#f4fbff")
+				self.controls[f"piece_{index}"] = (
+					origin_x, origin_y, origin_x + shape_width, origin_y + shape_height,
+				)
+		canvas.create_text(width / 2, height - 101, text=self.message, fill="#fff0d0",
+						   font=("Segoe UI", 10, "bold"))
 
 	def _draw_footer(self, width, height):
 		canvas = self.canvas
-		canvas.create_text(36, height - 45, text=f"{len(self.placed)} of 3", anchor="w",
+		canvas.create_text(36, height - 45, text=f"{len(self.placed)} of {len(self.pieces)}", anchor="w",
 						   fill="#f4d29a", font=("Segoe UI", 16))
 		labels = (("undo", "UNDO"), ("left", "ROTATE -"), ("right", "ROTATE +"), ("hint", "HINT"))
 		button_width = 112
@@ -241,10 +446,8 @@ class ShapeShift:
 		center_y = height / 2
 		if self.paused:
 			title, subtitle, button = "PAUSED", "Take a breath. The pieces will wait.", "RESUME"
-		elif self.puzzle < 3:
-			title, subtitle, button = "PUZZLE COMPLETE", "The whole shape is filled.", "NEXT PUZZLE"
 		else:
-			title, subtitle, button = "ALL FOUR COMPLETE", f"Final score: {self.score}", "PLAY AGAIN"
+			title, subtitle, button = "PUZZLE COMPLETE", "Same silhouette. Pieces are shuffled again.", "NEXT ROUND"
 		canvas.create_text(center_x, center_y - 52, text=title, fill="#fff1cb",
 						   font=("Segoe UI", 25, "bold"))
 		canvas.create_text(center_x, center_y - 14, text=subtitle, fill="#a8dfe6",
@@ -257,8 +460,8 @@ class ShapeShift:
 
 	def _cell_at(self, x, y):
 		_, _, cell, board_x, board_y, _ = self._layout()
-		column = int((x - board_x) // cell)
-		row = int((y - board_y) // cell)
+		column = (x - board_x) / cell
+		row = (y - board_y) / cell
 		if 0 <= column < BOARD_COLUMNS and 0 <= row < BOARD_ROWS:
 			return column, row
 		return None
@@ -273,13 +476,6 @@ class ShapeShift:
 			if self.paused:
 				self.paused = False
 				self.message = "Choose a piece, rotate it, then click a target cell."
-			elif self.puzzle == 3:
-				self.puzzle = 0
-				self.score = 1000
-				self.moves = 0
-				self.hints = 0
-				self.won = False
-				self._reset_puzzle()
 			else:
 				self.puzzle += 1
 				self.won = False
@@ -292,9 +488,9 @@ class ShapeShift:
 		if self._inside(point, self.controls["pause"]):
 			self._toggle_pause()
 			return
-		for index in range(3):
+		for index in range(len(self.pieces)):
 			key = f"piece_{index}"
-			if self._inside(point, self.controls[key]) and index not in self.placed:
+			if index not in self.placed and key in self.controls and self._inside(point, self.controls[key]):
 				self.selected = index
 				self.message = f"Piece {index + 1} selected. Rotate it, then choose its target position."
 				self._draw()
@@ -306,7 +502,8 @@ class ShapeShift:
 				return
 		cell = self._cell_at(event.x, event.y)
 		if cell is not None and self.selected is not None:
-			self._place(self.selected, cell, self.rotations[self.selected])
+			anchor = self._preview_anchor(self.selected, cell)
+			self._place(self.selected, anchor, self.rotations[self.selected])
 
 	def _motion(self, event):
 		self.hover_cell = self._cell_at(event.x, event.y)
@@ -327,6 +524,8 @@ class ShapeShift:
 
 		old_rotation = self.rotations[index]
 		self.history.append((index, old_rotation))
+		anchor = self.goal_anchors[index]
+		rotation = self.goal_rotations[index]
 		self.rotations[index] = rotation
 		self.placed[index] = (anchor, rotation)
 		self.selected = None
@@ -334,7 +533,7 @@ class ShapeShift:
 		if is_hint:
 			self.hints += 1
 		self.score = max(0, 1000 - self.moves * 15 - self.hints * 100)
-		if len(self.placed) == len(BASE_SHAPES):
+		if len(self.placed) == len(self.pieces):
 			self.won = True
 			self.message = "Puzzle complete!"
 		else:
@@ -356,7 +555,7 @@ class ShapeShift:
 	def _hint(self):
 		if self.paused or self.won:
 			return
-		index = next((piece for piece in range(3) if piece not in self.placed), None)
+		index = next((piece for piece in range(len(self.pieces)) if piece not in self.placed), None)
 		if index is None:
 			return
 		self._place(index, self.goal_anchors[index], self.goal_rotations[index], is_hint=True)
@@ -369,7 +568,6 @@ class ShapeShift:
 
 	def _reset_puzzle(self):
 		self.selected = None
-		self.rotations = [0, 0, 0]
 		self.placed = {}
 		self.history = []
 		self.hover_cell = None
