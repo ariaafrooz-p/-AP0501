@@ -1,0 +1,9 @@
+name: scene
+assetBundleName: scene
+dependencies:
+  cab-035eee2d3bdf596e3c43ced9dab2d887
+  cab-a89dea14b4d345c57a94b4e293b323c5
+mainAsset: {'preloadIndex': 0, 'preloadSize': 0, 'asset': {'m_FileID': 0, 'm_PathID': 0}}
+
+container (1 entries):
+  Packages/com.lumoslabs.masterpiece/Scenes/Masterpiece.unity	-> fileID 0 pathID 0

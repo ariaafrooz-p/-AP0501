@@ -1,0 +1,156 @@
+name: cug-shared-assets
+assetBundleName: cug-shared-assets
+dependencies:
+mainAsset: {'preloadIndex': 0, 'preloadSize': 0, 'asset': {'m_FileID': 0, 'm_PathID': 0}}
+
+container (150 entries):
+  Packages/com.lumoslabs.organicorder/Scripts/TMP Settings.asset	-> fileID 0 pathID 5850913247334645483
+  Packages/com.lumoslabs.sharedassets/Audio/answerCorrect.mp3	-> fileID 0 pathID -6518560493174623288
+  Packages/com.lumoslabs.sharedassets/Audio/answerCorrectX2.mp3	-> fileID 0 pathID 7778300061201911242
+  Packages/com.lumoslabs.sharedassets/Audio/answerCorrectX3.mp3	-> fileID 0 pathID -7591553874622878733
+  Packages/com.lumoslabs.sharedassets/Audio/answerCorrectX4.mp3	-> fileID 0 pathID 3265448752387894552
+  Packages/com.lumoslabs.sharedassets/Audio/answerWrong.mp3	-> fileID 0 pathID -3266800507233151757
+  Packages/com.lumoslabs.sharedassets/Audio/cardSet.mp3	-> fileID 0 pathID 7097336590314374626
+  Packages/com.lumoslabs.sharedassets/Audio/cardSlide.mp3	-> fileID 0 pathID 784800579019665179
+  Packages/com.lumoslabs.sharedassets/Audio/countdown.mp3	-> fileID 0 pathID 5462113234971816172
+  Packages/com.lumoslabs.sharedassets/Audio/counterCount.mp3	-> fileID 0 pathID -2599469578205115712
+  Packages/com.lumoslabs.sharedassets/Audio/counterCount_loopable.wav	-> fileID 0 pathID -1224550306464644252
+  Packages/com.lumoslabs.sharedassets/Audio/counterEnd.mp3	-> fileID 0 pathID 2488865915496425962
+  Packages/com.lumoslabs.sharedassets/Audio/gameEnd.mp3	-> fileID 0 pathID -5810997962396286754
+  Packages/com.lumoslabs.sharedassets/Audio/gameStart.mp3	-> fileID 0 pathID 7661157117398632540
+  Packages/com.lumoslabs.sharedassets/Audio/popUpAppear.mp3	-> fileID 0 pathID -3497000000227162928
+  Packages/com.lumoslabs.sharedassets/Audio/popUpDisappear.mp3	-> fileID 0 pathID -3534883796665028000
+  Packages/com.lumoslabs.sharedassets/Audio/timer.mp3	-> fileID 0 pathID -882139800987114345
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-100 SDF.asset	-> fileID 0 pathID -4270423673147353448
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-100 SDF.asset	-> fileID 0 pathID -691143402320750952
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-100 SDF.asset	-> fileID 0 pathID 7427405124293432984
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-100.ttf	-> fileID 0 pathID 5804148135783189116
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-100.ttf	-> fileID 0 pathID -8347737806320809348
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-100.ttf	-> fileID 0 pathID 6952720526776027772
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-300 SDF.asset	-> fileID 0 pathID -5327848318657332122
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-300 SDF.asset	-> fileID 0 pathID 9157558424417696870
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-300 SDF.asset	-> fileID 0 pathID -994828875666326426
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-300.ttf	-> fileID 0 pathID -3863869957167623167
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-300.ttf	-> fileID 0 pathID -6185064058803825663
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-300.ttf	-> fileID 0 pathID -7726729600167947263
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-500 SDF.asset	-> fileID 0 pathID 7329391951339148439
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-500 SDF.asset	-> fileID 0 pathID -7901117236695051113
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-500 SDF.asset	-> fileID 0 pathID -8187859137896819561
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-500.ttf	-> fileID 0 pathID 1298400103766141062
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-500.ttf	-> fileID 0 pathID 7314123037332056198
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-500.ttf	-> fileID 0 pathID 2562539444471441542
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-700 SDF.asset	-> fileID 0 pathID 8341261383181174231
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-700 SDF.asset	-> fileID 0 pathID -7563873087516998185
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-700 SDF.asset	-> fileID 0 pathID -1663086119090289193
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-700.ttf	-> fileID 0 pathID -2953603046743975970
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-700.ttf	-> fileID 0 pathID 3260268209200650206
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-700.ttf	-> fileID 0 pathID -6042371261089294370
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-900 SDF.asset	-> fileID 0 pathID -7889882796447273504
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-900 SDF.asset	-> fileID 0 pathID 2091822916631490016
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-900 SDF.asset	-> fileID 0 pathID 629035896508411360
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-900.ttf	-> fileID 0 pathID 8812136776714123985
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-900.ttf	-> fileID 0 pathID 4414932493047069393
+  Packages/com.lumoslabs.sharedassets/Fonts/MuseoSans-900.ttf	-> fileID 0 pathID -9040383692064982319
+  Packages/com.lumoslabs.sharedassets/Fonts/Report School SDF.asset	-> fileID 0 pathID 5935709962532121929
+  Packages/com.lumoslabs.sharedassets/Fonts/Report School SDF.asset	-> fileID 0 pathID 203302686863813961
+  Packages/com.lumoslabs.sharedassets/Fonts/Report School SDF.asset	-> fileID 0 pathID -7293562040925852343
+  Packages/com.lumoslabs.sharedassets/Fonts/Report School.ttf	-> fileID 0 pathID 996199189837976830
+  Packages/com.lumoslabs.sharedassets/Fonts/Report School.ttf	-> fileID 0 pathID -8204603941172931330
+  Packages/com.lumoslabs.sharedassets/Fonts/Report School.ttf	-> fileID 0 pathID 559400856403776766
+  Packages/com.lumoslabs.sharedassets/Lighting/DefaultLightingSettings.lighting	-> fileID 0 pathID 8644605472997137203
+  Packages/com.lumoslabs.sharedassets/PNGAssets/BackgroundVignette.png	-> fileID 0 pathID -5125925571082625562
+  Packages/com.lumoslabs.sharedassets/PNGAssets/BackgroundVignette.png	-> fileID 0 pathID 3956888406240878054
+  Packages/com.lumoslabs.sharedassets/SVGAssets/FeedbackSprites/sharedAssets_correctWeb.svg	-> fileID 0 pathID 3961312469112011500
+  Packages/com.lumoslabs.sharedassets/SVGAssets/FeedbackSprites/sharedAssets_correctWeb.svg	-> fileID 0 pathID 4401885103326247660
+  Packages/com.lumoslabs.sharedassets/SVGAssets/FeedbackSprites/sharedAssets_incorrectWeb.svg	-> fileID 0 pathID 2156922863433851616
+  Packages/com.lumoslabs.sharedassets/SVGAssets/FeedbackSprites/sharedAssets_incorrectWeb.svg	-> fileID 0 pathID 4652641491528884960
+  Packages/com.lumoslabs.sharedassets/SVGAssets/HandPointer/HandOutlineFilled.svg	-> fileID 0 pathID 5356950078791348035
+  Packages/com.lumoslabs.sharedassets/SVGAssets/HandPointer/HandOutlineFilled.svg	-> fileID 0 pathID 2601651219543617347
+  Packages/com.lumoslabs.sharedassets/SVGAssets/HandPointer/HandPointer.svg	-> fileID 0 pathID -4098406842316059394
+  Packages/com.lumoslabs.sharedassets/SVGAssets/HandPointer/HandPointer.svg	-> fileID 0 pathID 205735764996689150
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Loading/gear01.svg	-> fileID 0 pathID 2107918605437118497
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Loading/gear01.svg	-> fileID 0 pathID 8413375466787514401
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Loading/gear02.svg	-> fileID 0 pathID 520117189639489598
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Loading/gear02.svg	-> fileID 0 pathID 3635419817459927102
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Loading/gear03.svg	-> fileID 0 pathID -8007708786493327875
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Loading/gear03.svg	-> fileID 0 pathID -8998222172186380803
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Loading/head.svg	-> fileID 0 pathID -3406381218387459596
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Loading/head.svg	-> fileID 0 pathID -4803423570352799244
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Music_icon.svg	-> fileID 0 pathID 500556006108889213
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Music_icon.svg	-> fileID 0 pathID 3138530407657242749
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Mute.svg	-> fileID 0 pathID 4498538404772564742
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Mute.svg	-> fileID 0 pathID -5934170588568695034
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Popup/PopupBubble.svg	-> fileID 0 pathID -5535393977121308562
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Popup/PopupBubble.svg	-> fileID 0 pathID -846408906234789778
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Popup/PopupTail.svg	-> fileID 0 pathID -1664905537964927441
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Popup/PopupTail.svg	-> fileID 0 pathID 1913348277928203823
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Pulse/Pulse.svg	-> fileID 0 pathID 1980512197606626802
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Pulse/Pulse.svg	-> fileID 0 pathID -2487384110735174158
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Pulse/Ring1.svg	-> fileID 0 pathID -2713187648848060543
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Pulse/Ring1.svg	-> fileID 0 pathID -5601879718394191999
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Pulse/Ring2.svg	-> fileID 0 pathID 1032848926842565722
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Pulse/Ring2.svg	-> fileID 0 pathID -8470676866866269094
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Soundfx_icon.svg	-> fileID 0 pathID 6252826385475475507
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Soundfx_icon.svg	-> fileID 0 pathID 6860414157296736307
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Timer.svg	-> fileID 0 pathID -1030254609159791547
+  Packages/com.lumoslabs.sharedassets/SVGAssets/Timer.svg	-> fileID 0 pathID -2549803336883282875
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialFinger.svg	-> fileID 0 pathID -8918631356724756801
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialFinger.svg	-> fileID 0 pathID -4644149784666915137
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialKeyboards/tutorial_keyboardNumbersHighlight01.svg	-> fileID 0 pathID 7762067808983480211
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialKeyboards/tutorial_keyboardNumbersHighlight01.svg	-> fileID 0 pathID -4356666751986665581
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialKeyboards/tutorial_keyboardNumbersHighlight02.svg	-> fileID 0 pathID -8893240639684484075
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialKeyboards/tutorial_keyboardNumbersHighlight02.svg	-> fileID 0 pathID -3817630747425512427
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialKeyboards/tutorial_keyboard_arrow.svg	-> fileID 0 pathID -1695241846867899006
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialKeyboards/tutorial_keyboard_arrow.svg	-> fileID 0 pathID 219409459107057026
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialKeyboards/tutorial_keyboard_arrows.svg	-> fileID 0 pathID -1705670697082926620
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialKeyboards/tutorial_keyboard_arrows.svg	-> fileID 0 pathID 5499234948311370212
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialKeyboards/tutorial_keyboard_arrowsHighlight.svg	-> fileID 0 pathID -8369117857621263794
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialKeyboards/tutorial_keyboard_arrowsHighlight.svg	-> fileID 0 pathID -4463264272708519346
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialKeyboards/tutorial_keyboard_lettersHighlight.svg	-> fileID 0 pathID 1806995057419349327
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialKeyboards/tutorial_keyboard_lettersHighlight.svg	-> fileID 0 pathID 4936970228734815567
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialKeyboards/tutorial_keyboard_lg.svg	-> fileID 0 pathID -7722856450604318835
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialKeyboards/tutorial_keyboard_lg.svg	-> fileID 0 pathID -97394390515826803
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialKeyboards/tutorial_keyboard_sm.svg	-> fileID 0 pathID -6394923163747283246
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialKeyboards/tutorial_keyboard_sm.svg	-> fileID 0 pathID -3161351397703807278
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialKeyboards/tutorial_keyboard_wasdHighlight.svg	-> fileID 0 pathID 1551515765503492813
+  Packages/com.lumoslabs.sharedassets/SVGAssets/TutorialKeyboards/tutorial_keyboard_wasdHighlight.svg	-> fileID 0 pathID 7374039301882577613
+  Packages/com.lumoslabs.sharedassets/SVGAssets/buttonShape.svg	-> fileID 0 pathID -2489531572157728323
+  Packages/com.lumoslabs.sharedassets/SVGAssets/buttonShape.svg	-> fileID 0 pathID 9107030936543902141
+  Packages/com.lumoslabs.sharedassets/SVGAssets/capsule.svg	-> fileID 0 pathID -5059028579328075556
+  Packages/com.lumoslabs.sharedassets/SVGAssets/capsule.svg	-> fileID 0 pathID 6330767233626659036
+  Packages/com.lumoslabs.sharedassets/SVGAssets/noMusic_icon.svg	-> fileID 0 pathID 6714085182247991063
+  Packages/com.lumoslabs.sharedassets/SVGAssets/noMusic_icon.svg	-> fileID 0 pathID -6652532633388976361
+  Packages/com.lumoslabs.sharedassets/SVGAssets/noMuteIcon_white.svg	-> fileID 0 pathID -2536187513425698521
+  Packages/com.lumoslabs.sharedassets/SVGAssets/noMuteIcon_white.svg	-> fileID 0 pathID 455646302096318759
+  Packages/com.lumoslabs.sharedassets/SVGAssets/noSoundfx_icon.svg	-> fileID 0 pathID 1482131605272796357
+  Packages/com.lumoslabs.sharedassets/SVGAssets/noSoundfx_icon.svg	-> fileID 0 pathID -8392095948263383867
+  Packages/com.lumoslabs.sharedassets/SVGAssets/roundedEndCap.svg	-> fileID 0 pathID -6124553841210199319
+  Packages/com.lumoslabs.sharedassets/SVGAssets/roundedEndCap.svg	-> fileID 0 pathID -1825212873719188759
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_TutorialDashedCircle.svg	-> fileID 0 pathID 4779168116442107665
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_TutorialDashedCircle.svg	-> fileID 0 pathID -3479792859327656175
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_circle.svg	-> fileID 0 pathID 3820141543492778725
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_circle.svg	-> fileID 0 pathID -7238501547368416539
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_correct.svg	-> fileID 0 pathID 6791543646813538638
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_correct.svg	-> fileID 0 pathID 1928410427039861070
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_help.svg	-> fileID 0 pathID -4482453703558004930
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_help.svg	-> fileID 0 pathID -7538022761006530754
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_incorrect.svg	-> fileID 0 pathID -712732040956202372
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_incorrect.svg	-> fileID 0 pathID 2825595205746504316
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_pause.svg	-> fileID 0 pathID 3377385418378818407
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_pause.svg	-> fileID 0 pathID 4694742053442597735
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_quit.svg	-> fileID 0 pathID -2623814109270544981
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_quit.svg	-> fileID 0 pathID 6571388267780926891
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_restart.svg	-> fileID 0 pathID 581174167590777858
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_restart.svg	-> fileID 0 pathID 866461993884496898
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_resume.svg	-> fileID 0 pathID -6952845473492211754
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_resume.svg	-> fileID 0 pathID 6618944143689017302
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_square.svg	-> fileID 0 pathID 4801019423544931635
+  Packages/com.lumoslabs.sharedassets/SVGAssets/sharedAssets_square.svg	-> fileID 0 pathID -5037223393910688461
+  Packages/com.lumoslabs.sharedassets/SVGAssets/square.svg	-> fileID 0 pathID 1070506202911888151
+  Packages/com.lumoslabs.sharedassets/SVGAssets/square.svg	-> fileID 0 pathID 3166629371103105815
+  Packages/com.lumoslabs.sharedassets/SVGAssets/streakBlank.svg	-> fileID 0 pathID 279917459627352824
+  Packages/com.lumoslabs.sharedassets/SVGAssets/streakBlank.svg	-> fileID 0 pathID 6284667836685263608
+  Packages/com.lumoslabs.sharedassets/SVGAssets/streakFill.svg	-> fileID 0 pathID -6338582810091302125
+  Packages/com.lumoslabs.sharedassets/SVGAssets/streakFill.svg	-> fileID 0 pathID 1460455727341916947
+  Packages/com.lumoslabs.sharedassets/SVGAssets/upKeyboard.svg	-> fileID 0 pathID -4028329020788955008
+  Packages/com.lumoslabs.sharedassets/SVGAssets/upKeyboard.svg	-> fileID 0 pathID 1271748176509544576
