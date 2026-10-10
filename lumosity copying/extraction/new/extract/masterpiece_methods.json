@@ -1,0 +1,3782 @@
+[
+{
+"rid": 1,
+"type": "SoundView",
+"method": "OnPlayCorrectSound",
+"table": 23392,
+"func": 735
+},
+{
+"rid": 2,
+"type": "SoundView",
+"method": "OnPlayExcellentSound",
+"table": 23393,
+"func": 735
+},
+{
+"rid": 3,
+"type": "SoundView",
+"method": "OnPlayPerfectSound",
+"table": 23394,
+"func": 735
+},
+{
+"rid": 4,
+"type": "SoundView",
+"method": "OnPlayWooshSound",
+"table": 23395,
+"func": 735
+},
+{
+"rid": 5,
+"type": "SoundView",
+"method": ".ctor",
+"table": 23396,
+"func": 9457
+},
+{
+"rid": 6,
+"type": "<RunAutoPlay>d__4",
+"method": "StartAutoPlay",
+"table": 23397,
+"func": 115499
+},
+{
+"rid": 7,
+"type": "<RunAutoPlay>d__4",
+"method": "RunAutoPlay",
+"table": 23398,
+"func": 115500
+},
+{
+"rid": 8,
+"type": "<RunAutoPlay>d__4",
+"method": "HandleGameOver",
+"table": 23399,
+"func": 115501
+},
+{
+"rid": 9,
+"type": "<RunAutoPlay>d__4",
+"method": ".ctor",
+"table": 23400,
+"func": 19569
+},
+{
+"rid": 10,
+"type": "<RunAutoPlay>d__4",
+"method": ".ctor",
+"table": 23401,
+"func": 4396
+},
+{
+"rid": 11,
+"type": "<RunAutoPlay>d__4",
+"method": "System.IDisposable.Dispose",
+"table": 23402,
+"func": 735
+},
+{
+"rid": 12,
+"type": "MpAutoPlayer",
+"method": "MoveNext",
+"table": 23403,
+"func": 115502
+},
+{
+"rid": 13,
+"type": "MpAutoPlayer",
+"method": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+"table": 23404,
+"func": 4381
+},
+{
+"rid": 14,
+"type": "MpAutoPlayer",
+"method": "System.Collections.IEnumerator.Reset",
+"table": 23405,
+"func": 115503
+},
+{
+"rid": 15,
+"type": "MpAutoPlayer",
+"method": "System.Collections.IEnumerator.get_Current",
+"table": 23406,
+"func": 4381
+},
+{
+"rid": 16,
+"type": "MpBottomButtonsCmd",
+"method": ".cctor",
+"table": 23407,
+"func": 115504
+},
+{
+"rid": 17,
+"type": "MpBottomButtonsController",
+"method": "RegisterCommands",
+"table": 23408,
+"func": 115505
+},
+{
+"rid": 18,
+"type": "MpBottomButtonsController",
+"method": "ShowBottomButtons",
+"table": 23409,
+"func": 115506
+},
+{
+"rid": 19,
+"type": "MpBottomButtonsController",
+"method": "HideBottomButtons",
+"table": 23410,
+"func": 115507
+},
+{
+"rid": 20,
+"type": "MpBottomButtonsController",
+"method": "HideBottomInstant",
+"table": 23411,
+"func": 115508
+},
+{
+"rid": 21,
+"type": "MpBottomButtonsController",
+"method": "HintButtonsState",
+"table": 23412,
+"func": 115509
+},
+{
+"rid": 22,
+"type": "MpBottomButtonsController",
+"method": "SetButtonsState",
+"table": 23413,
+"func": 115510
+},
+{
+"rid": 23,
+"type": "MpBottomButtonsController",
+"method": ".ctor",
+"table": 23414,
+"func": 19569
+},
+{
+"rid": 24,
+"type": "MpBottomButtonsController",
+"method": ".cctor",
+"table": 23415,
+"func": 115511
+},
+{
+"rid": 25,
+"type": "GameplayNote",
+"method": ".cctor",
+"table": 23416,
+"func": 115512
+},
+{
+"rid": 26,
+"type": "Hint",
+"method": "OnBegin",
+"table": 23417,
+"func": 115513
+},
+{
+"rid": 27,
+"type": "Hint",
+"method": "StartTrial",
+"table": 23418,
+"func": 115514
+},
+{
+"rid": 28,
+"type": "Hint",
+"method": "Attempt",
+"table": 23419,
+"func": 115515
+},
+{
+"rid": 29,
+"type": "Hint",
+"method": "Show",
+"table": 23420,
+"func": 115516
+},
+{
+"rid": 30,
+"type": "Hint",
+"method": "Disable",
+"table": 23421,
+"func": 115517
+},
+{
+"rid": 31,
+"type": "Hint",
+"method": ".ctor",
+"table": 23422,
+"func": 115518
+},
+{
+"rid": 32,
+"type": "HintOrder",
+"method": "IsPositionClose",
+"table": 23423,
+"func": 115519
+},
+{
+"rid": 33,
+"type": "HintOrder",
+"method": "SetupIndexes",
+"table": 23424,
+"func": 115520
+},
+{
+"rid": 34,
+"type": "HintOrder",
+"method": "SetupPreferredNames",
+"table": 23425,
+"func": 115521
+},
+{
+"rid": 35,
+"type": "HintOrder",
+"method": "Update",
+"table": 23426,
+"func": 115522
+},
+{
+"rid": 36,
+"type": "HintOrder",
+"method": "SortPreferredNames",
+"table": 23427,
+"func": 115523
+},
+{
+"rid": 37,
+"type": "HintOrder",
+"method": "SortNotClose",
+"table": 23428,
+"func": 115524
+},
+{
+"rid": 38,
+"type": "HintOrder",
+"method": ".ctor",
+"table": 23429,
+"func": 115525
+},
+{
+"rid": 39,
+"type": "PieceView",
+"method": "LocalToGlobal",
+"table": 23430,
+"func": 115526
+},
+{
+"rid": 40,
+"type": "PieceView",
+"method": "InvertY",
+"table": 23431,
+"func": 115527
+},
+{
+"rid": 41,
+"type": "PieceView",
+"method": "SetColliderPoints",
+"table": 23432,
+"func": 115528
+},
+{
+"rid": 42,
+"type": "PieceView",
+"method": "GetColliderPoints",
+"table": 23433,
+"func": 115529
+},
+{
+"rid": 43,
+"type": "PieceView",
+"method": "Center",
+"table": 23434,
+"func": 115530
+},
+{
+"rid": 44,
+"type": "PieceView",
+"method": "GetSensorPoints",
+"table": 23435,
+"func": 115531
+},
+{
+"rid": 45,
+"type": "LevelLoader",
+"method": "Load",
+"table": 23436,
+"func": 115532
+},
+{
+"rid": 46,
+"type": "LevelLoader",
+"method": ".ctor",
+"table": 23437,
+"func": 115533
+},
+{
+"rid": 47,
+"type": "PuzzleCmd",
+"method": ".cctor",
+"table": 23438,
+"func": 115536
+},
+{
+"rid": 48,
+"type": "<>c",
+"method": "Initialize",
+"table": 23439,
+"func": 115537
+},
+{
+"rid": 49,
+"type": "<>c",
+"method": "RegisterCommands",
+"table": 23440,
+"func": 115543
+},
+{
+"rid": 50,
+"type": "<>c",
+"method": "RegisterNotifications",
+"table": 23441,
+"func": 115544
+},
+{
+"rid": 51,
+"type": "<AutoPlayBegin>d__106",
+"method": "HandlePanelWillNavigate",
+"table": 23442,
+"func": 115545
+},
+{
+"rid": 52,
+"type": "<AutoPlayBegin>d__106",
+"method": "HandleAspectChanged",
+"table": 23443,
+"func": 115540
+},
+{
+"rid": 53,
+"type": "<AutoPlayBegin>d__106",
+"method": "SetupPortrait",
+"table": 23444,
+"func": 115551
+},
+{
+"rid": 54,
+"type": "<AutoPlayBegin>d__106",
+"method": "SetupLandscape",
+"table": 23445,
+"func": 115552
+},
+{
+"rid": 55,
+"type": "<AutoPlayBegin>d__106",
+"method": "ChangePiecePositions",
+"table": 23446,
+"func": 115553
+},
+{
+"rid": 56,
+"type": "<AutoPlayBegin>d__106",
+"method": "HideLevels",
+"table": 23447,
+"func": 115548
+},
+{
+"rid": 57,
+"type": "<FillActionData>d__68",
+"method": "HandleTutorialCompleted",
+"table": 23448,
+"func": 115554
+},
+{
+"rid": 58,
+"type": "<FillActionData>d__68",
+"method": "HandleTutorialSkipped",
+"table": 23449,
+"func": 115556
+},
+{
+"rid": 59,
+"type": "<FillActionData>d__68",
+"method": "HandleResetRequested",
+"table": 23450,
+"func": 115557
+},
+{
+"rid": 60,
+"type": "<FillActionData>d__68",
+"method": "HandleEnterState",
+"table": 23451,
+"func": 115561
+},
+{
+"rid": 61,
+"type": "<FillActionData>d__68",
+"method": "HandleReset",
+"table": 23452,
+"func": 115571
+},
+{
+"rid": 62,
+"type": "<FillActionData>d__68",
+"method": "LumosLabs.Shared.Pillar.ITrialGenerator.GenerateTrial",
+"table": 23453,
+"func": 115572
+},
+{
+"rid": 63,
+"type": "<GamePlayComplete>d__70",
+"method": "NextTrial",
+"table": 23454,
+"func": 115577
+},
+{
+"rid": 64,
+"type": "<GamePlayComplete>d__70",
+"method": "HandleSessionStarted",
+"table": 23455,
+"func": 4408
+},
+{
+"rid": 65,
+"type": "<GamePlayComplete>d__70",
+"method": "HandleTrialEnded",
+"table": 23456,
+"func": 115578
+},
+{
+"rid": 66,
+"type": "<GamePlayComplete>d__70",
+"method": "HandleResponseEnded",
+"table": 23457,
+"func": 115579
+},
+{
+"rid": 67,
+"type": "<GamePlayComplete>d__70",
+"method": "HandleSessionEnded",
+"table": 23458,
+"func": 115580
+},
+{
+"rid": 68,
+"type": "<GamePlayComplete>d__70",
+"method": "HandleTrialMetadata",
+"table": 23459,
+"func": 115581
+},
+{
+"rid": 69,
+"type": "<GiveAnswerAsPerPerformance>d__105",
+"method": "HandleActionStarted",
+"table": 23460,
+"func": 115582
+},
+{
+"rid": 70,
+"type": "<GiveAnswerAsPerPerformance>d__105",
+"method": "HandleActionEnded",
+"table": 23461,
+"func": 115583
+},
+{
+"rid": 71,
+"type": "<GiveAnswerAsPerPerformance>d__105",
+"method": "FillActionData",
+"table": 23462,
+"func": 115584
+},
+{
+"rid": 72,
+"type": "<GiveAnswerAsPerPerformance>d__105",
+"method": "TrialEnd",
+"table": 23463,
+"func": 115585
+},
+{
+"rid": 73,
+"type": "<GiveAnswerAsPerPerformance>d__105",
+"method": "GamePlayComplete",
+"table": 23464,
+"func": 115586
+},
+{
+"rid": 74,
+"type": "<GiveAnswerAsPerPerformance>d__105",
+"method": "EnableBottomButtons",
+"table": 23465,
+"func": 115569
+},
+{
+"rid": 75,
+"type": "<SetupLandscape>d__51",
+"method": "ShowBottomButtons",
+"table": 23466,
+"func": 115587
+},
+{
+"rid": 76,
+"type": "<SetupLandscape>d__51",
+"method": "OnHintButtonPressed",
+"table": 23467,
+"func": 115588
+},
+{
+"rid": 77,
+"type": "<SetupLandscape>d__51",
+"method": "UpdateScore",
+"table": 23468,
+"func": 115591
+},
+{
+"rid": 78,
+"type": "<SetupLandscape>d__51",
+"method": "OnRotateLeftButtonPressed",
+"table": 23469,
+"func": 115596
+},
+{
+"rid": 79,
+"type": "<SetupLandscape>d__51",
+"method": "OnRotateRightButtonPressed",
+"table": 23470,
+"func": 115599
+},
+{
+"rid": 80,
+"type": "<SetupLandscape>d__51",
+"method": "Turn",
+"table": 23471,
+"func": 115597
+},
+{
+"rid": 81,
+"type": "<SetupPortrait>d__50",
+"method": "InitPuzzle",
+"table": 23472,
+"func": 115565
+},
+{
+"rid": 82,
+"type": "<SetupPortrait>d__50",
+"method": "InitializePuzzle",
+"table": 23473,
+"func": 115570
+},
+{
+"rid": 83,
+"type": "<SetupPortrait>d__50",
+"method": "Reset",
+"table": 23474,
+"func": 115562
+},
+{
+"rid": 84,
+"type": "<SetupPortrait>d__50",
+"method": "HandleTick",
+"table": 23475,
+"func": 115612
+},
+{
+"rid": 85,
+"type": "<SetupPortrait>d__50",
+"method": "Tick",
+"table": 23476,
+"func": 115613
+},
+{
+"rid": 86,
+"type": "<SetupPortrait>d__50",
+"method": "PlayBGMusic",
+"table": 23477,
+"func": 115614
+},
+{
+"rid": 87,
+"type": "<ShowBottomButtons>d__72",
+"method": "BeforeEndGameplay",
+"table": 23478,
+"func": 115621
+},
+{
+"rid": 88,
+"type": "<ShowBottomButtons>d__72",
+"method": "GameCompleted",
+"table": 23479,
+"func": 115634
+},
+{
+"rid": 89,
+"type": "<ShowBottomButtons>d__72",
+"method": "UpdateDrag",
+"table": 23480,
+"func": 115615
+},
+{
+"rid": 90,
+"type": "<ShowBottomButtons>d__72",
+"method": "UpdateHintAndDashboard",
+"table": 23481,
+"func": 115631
+},
+{
+"rid": 91,
+"type": "<ShowBottomButtons>d__72",
+"method": "UpdatePerfectRotationsText",
+"table": 23482,
+"func": 115617
+},
+{
+"rid": 92,
+"type": "<ShowBottomButtons>d__72",
+"method": "UpdateHintFilter",
+"table": 23483,
+"func": 115619
+},
+{
+"rid": 93,
+"type": "PuzzleController",
+"method": "PickupAudio",
+"table": 23484,
+"func": 115638
+},
+{
+"rid": 94,
+"type": "PuzzleController",
+"method": "AnimateSelected",
+"table": 23485,
+"func": 115623
+},
+{
+"rid": 95,
+"type": "PuzzleController",
+"method": "SetSortingOrder",
+"table": 23486,
+"func": 115637
+},
+{
+"rid": 96,
+"type": "PuzzleController",
+"method": "UpdateScroll",
+"table": 23487,
+"func": 115620
+},
+{
+"rid": 97,
+"type": "PuzzleController",
+"method": "UpdateScrollState",
+"table": 23488,
+"func": 115633
+},
+{
+"rid": 98,
+"type": "PuzzleController",
+"method": "StartTrial",
+"table": 23489,
+"func": 115632
+},
+{
+"rid": 99,
+"type": "PuzzleController",
+"method": "UpdateSilhouette",
+"table": 23490,
+"func": 115618
+},
+{
+"rid": 100,
+"type": "PuzzleController",
+"method": "NextLevel",
+"table": 23491,
+"func": 115576
+},
+{
+"rid": 101,
+"type": "PuzzleController",
+"method": "Populate",
+"table": 23492,
+"func": 115574
+},
+{
+"rid": 102,
+"type": "PuzzleController",
+"method": "PopulateView",
+"table": 23493,
+"func": 115609
+},
+{
+"rid": 103,
+"type": "PuzzleController",
+"method": "UpdateHintOrder",
+"table": 23494,
+"func": 115589
+},
+{
+"rid": 104,
+"type": "PuzzleController",
+"method": "ShowBonusText",
+"table": 23495,
+"func": 115630
+},
+{
+"rid": 105,
+"type": "PuzzleController",
+"method": "GetAutoSnapPosition",
+"table": 23496,
+"func": 115598
+},
+{
+"rid": 106,
+"type": "PuzzleController",
+"method": "AutoPlayNextTrial",
+"table": 23497,
+"func": 115658
+},
+{
+"rid": 107,
+"type": "PuzzleController",
+"method": "StartAutoPlayAnswer",
+"table": 23498,
+"func": 115659
+},
+{
+"rid": 108,
+"type": "PuzzleController",
+"method": "GiveAnswerAsPerPerformance",
+"table": 23499,
+"func": 115660
+},
+{
+"rid": 109,
+"type": "PuzzleController",
+"method": "AutoPlayBegin",
+"table": 23500,
+"func": 115568
+},
+{
+"rid": 110,
+"type": "PuzzleController",
+"method": "ShufflePieces",
+"table": 0,
+"func": null
+},
+{
+"rid": 111,
+"type": "PuzzleController",
+"method": ".ctor",
+"table": 23501,
+"func": 115661
+},
+{
+"rid": 112,
+"type": "PuzzleController",
+"method": "<NextTrial>b__60_0",
+"table": 23502,
+"func": 4723
+},
+{
+"rid": 113,
+"type": "PuzzleController",
+"method": "<NextTrial>b__60_1",
+"table": 23503,
+"func": 4412
+},
+{
+"rid": 114,
+"type": "PuzzleController",
+"method": "<InitPuzzle>b__78_0",
+"table": 23504,
+"func": 4723
+},
+{
+"rid": 115,
+"type": "PuzzleController",
+"method": "<InitPuzzle>b__78_1",
+"table": 23505,
+"func": 4412
+},
+{
+"rid": 116,
+"type": "PuzzleController",
+"method": ".cctor",
+"table": 23506,
+"func": 115662
+},
+{
+"rid": 117,
+"type": "PuzzleController",
+"method": ".ctor",
+"table": 23507,
+"func": 735
+},
+{
+"rid": 118,
+"type": "PuzzleController",
+"method": "<Populate>b__98_0",
+"table": 23508,
+"func": 28657
+},
+{
+"rid": 119,
+"type": "PuzzleController",
+"method": ".ctor",
+"table": 23509,
+"func": 4396
+},
+{
+"rid": 120,
+"type": "PuzzleController",
+"method": "System.IDisposable.Dispose",
+"table": 23510,
+"func": 735
+},
+{
+"rid": 121,
+"type": "PuzzleController",
+"method": "MoveNext",
+"table": 23511,
+"func": 115663
+},
+{
+"rid": 122,
+"type": "PuzzleController",
+"method": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+"table": 23512,
+"func": 4381
+},
+{
+"rid": 123,
+"type": "PuzzleController",
+"method": "System.Collections.IEnumerator.Reset",
+"table": 23513,
+"func": 115664
+},
+{
+"rid": 124,
+"type": "PuzzleController",
+"method": "System.Collections.IEnumerator.get_Current",
+"table": 23514,
+"func": 4381
+},
+{
+"rid": 125,
+"type": "PuzzleController",
+"method": ".ctor",
+"table": 23515,
+"func": 4396
+},
+{
+"rid": 126,
+"type": "PuzzleController",
+"method": "System.IDisposable.Dispose",
+"table": 23516,
+"func": 735
+},
+{
+"rid": 127,
+"type": "PuzzleController",
+"method": "MoveNext",
+"table": 23517,
+"func": 115665
+},
+{
+"rid": 128,
+"type": "PuzzleController",
+"method": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+"table": 23518,
+"func": 4381
+},
+{
+"rid": 129,
+"type": "PuzzleController",
+"method": "System.Collections.IEnumerator.Reset",
+"table": 23519,
+"func": 115666
+},
+{
+"rid": 130,
+"type": "PuzzleController",
+"method": "System.Collections.IEnumerator.get_Current",
+"table": 23520,
+"func": 4381
+},
+{
+"rid": 131,
+"type": "PuzzleController",
+"method": ".ctor",
+"table": 23521,
+"func": 4396
+},
+{
+"rid": 132,
+"type": "PuzzleController",
+"method": "System.IDisposable.Dispose",
+"table": 23522,
+"func": 735
+},
+{
+"rid": 133,
+"type": "PuzzleController",
+"method": "MoveNext",
+"table": 23523,
+"func": 115667
+},
+{
+"rid": 134,
+"type": "PuzzleController",
+"method": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+"table": 23524,
+"func": 4381
+},
+{
+"rid": 135,
+"type": "PuzzleController",
+"method": "System.Collections.IEnumerator.Reset",
+"table": 23525,
+"func": 115668
+},
+{
+"rid": 136,
+"type": "PuzzleController",
+"method": "System.Collections.IEnumerator.get_Current",
+"table": 23526,
+"func": 4381
+},
+{
+"rid": 137,
+"type": "PuzzleController",
+"method": ".ctor",
+"table": 23527,
+"func": 4396
+},
+{
+"rid": 138,
+"type": "PuzzleController",
+"method": "System.IDisposable.Dispose",
+"table": 23528,
+"func": 735
+},
+{
+"rid": 139,
+"type": "PuzzleController",
+"method": "MoveNext",
+"table": 23529,
+"func": 115669
+},
+{
+"rid": 140,
+"type": "PuzzleController",
+"method": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+"table": 23530,
+"func": 4381
+},
+{
+"rid": 141,
+"type": "PuzzleController",
+"method": "System.Collections.IEnumerator.Reset",
+"table": 23531,
+"func": 115671
+},
+{
+"rid": 142,
+"type": "PuzzleController",
+"method": "System.Collections.IEnumerator.get_Current",
+"table": 23532,
+"func": 4381
+},
+{
+"rid": 143,
+"type": "PuzzleController",
+"method": ".ctor",
+"table": 23533,
+"func": 4396
+},
+{
+"rid": 144,
+"type": "PuzzleController",
+"method": "System.IDisposable.Dispose",
+"table": 23534,
+"func": 735
+},
+{
+"rid": 145,
+"type": "PuzzleController",
+"method": "MoveNext",
+"table": 23535,
+"func": 115672
+},
+{
+"rid": 146,
+"type": "PuzzleController",
+"method": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+"table": 23536,
+"func": 4381
+},
+{
+"rid": 147,
+"type": "PuzzleController",
+"method": "System.Collections.IEnumerator.Reset",
+"table": 23537,
+"func": 115673
+},
+{
+"rid": 148,
+"type": "PuzzleController",
+"method": "System.Collections.IEnumerator.get_Current",
+"table": 23538,
+"func": 4381
+},
+{
+"rid": 149,
+"type": "PuzzleController",
+"method": ".ctor",
+"table": 23539,
+"func": 4396
+},
+{
+"rid": 150,
+"type": "PuzzleController",
+"method": "System.IDisposable.Dispose",
+"table": 23540,
+"func": 735
+},
+{
+"rid": 151,
+"type": "PuzzleController",
+"method": "MoveNext",
+"table": 23541,
+"func": 115674
+},
+{
+"rid": 152,
+"type": "PuzzleController",
+"method": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+"table": 23542,
+"func": 4381
+},
+{
+"rid": 153,
+"type": "PuzzleController",
+"method": "System.Collections.IEnumerator.Reset",
+"table": 23543,
+"func": 115675
+},
+{
+"rid": 154,
+"type": "PuzzleController",
+"method": "System.Collections.IEnumerator.get_Current",
+"table": 23544,
+"func": 4381
+},
+{
+"rid": 155,
+"type": "PuzzleController",
+"method": ".ctor",
+"table": 23545,
+"func": 4396
+},
+{
+"rid": 156,
+"type": "PuzzleController",
+"method": "System.IDisposable.Dispose",
+"table": 23546,
+"func": 735
+},
+{
+"rid": 157,
+"type": "PuzzleController",
+"method": "MoveNext",
+"table": 23547,
+"func": 115676
+},
+{
+"rid": 158,
+"type": "PuzzleController",
+"method": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+"table": 23548,
+"func": 4381
+},
+{
+"rid": 159,
+"type": "PuzzleController",
+"method": "System.Collections.IEnumerator.Reset",
+"table": 23549,
+"func": 115677
+},
+{
+"rid": 160,
+"type": "PuzzleController",
+"method": "System.Collections.IEnumerator.get_Current",
+"table": 23550,
+"func": 4381
+},
+{
+"rid": 161,
+"type": "PuzzleModel",
+"method": "GetTurn",
+"table": 23551,
+"func": 115678
+},
+{
+"rid": 162,
+"type": "PuzzleModel",
+"method": "SetTurn",
+"table": 23552,
+"func": 115646
+},
+{
+"rid": 163,
+"type": "PuzzleModel",
+"method": ".ctor",
+"table": 23553,
+"func": 115538
+},
+{
+"rid": 164,
+"type": "PuzzleModel",
+"method": "Init",
+"table": 23554,
+"func": 115563
+},
+{
+"rid": 165,
+"type": "PuzzleModel",
+"method": "CanRotate",
+"table": 23555,
+"func": 115600
+},
+{
+"rid": 166,
+"type": "PuzzleModel",
+"method": "Tick",
+"table": 23556,
+"func": 115624
+},
+{
+"rid": 167,
+"type": "PuzzleModel",
+"method": "CompleteTrial",
+"table": 23557,
+"func": 115641
+},
+{
+"rid": 168,
+"type": "PuzzleModel",
+"method": "OnBegin",
+"table": 23558,
+"func": 115567
+},
+{
+"rid": 169,
+"type": "PuzzleModel",
+"method": "PopLevel",
+"table": 23559,
+"func": 115653
+},
+{
+"rid": 170,
+"type": "PuzzleModel",
+"method": "SetContent",
+"table": 23560,
+"func": 115610
+},
+{
+"rid": 171,
+"type": "PuzzleModel",
+"method": "Setup",
+"table": 23561,
+"func": 115566
+},
+{
+"rid": 172,
+"type": "PuzzleModel",
+"method": "Populate",
+"table": 23562,
+"func": 115608
+},
+{
+"rid": 173,
+"type": "PuzzleModel",
+"method": "StartTrial",
+"table": 23563,
+"func": 115573
+},
+{
+"rid": 174,
+"type": "PuzzleModel",
+"method": "CompleteTrials",
+"table": 23564,
+"func": 115641
+},
+{
+"rid": 175,
+"type": "PuzzleModel",
+"method": "SetIsWheelVisible",
+"table": 23565,
+"func": 115683
+},
+{
+"rid": 176,
+"type": "PuzzleModel",
+"method": "SetIsDragging",
+"table": 23566,
+"func": 115636
+},
+{
+"rid": 177,
+"type": "PuzzleModel",
+"method": "Rotate",
+"table": 23567,
+"func": 115600
+},
+{
+"rid": 178,
+"type": "PuzzleModel",
+"method": "GetDegrees",
+"table": 23568,
+"func": 115601
+},
+{
+"rid": 179,
+"type": "PuzzleModel",
+"method": "UpdateIsMoveNow",
+"table": 23569,
+"func": 115692
+},
+{
+"rid": 180,
+"type": "PuzzleModel",
+"method": "IsMoving",
+"table": 23570,
+"func": 115690
+},
+{
+"rid": 181,
+"type": "PuzzleModel",
+"method": "Update",
+"table": 23571,
+"func": 115616
+},
+{
+"rid": 182,
+"type": "PuzzleModel",
+"method": ".cctor",
+"table": 23572,
+"func": 115695
+},
+{
+"rid": 183,
+"type": "PuzzleNote",
+"method": ".cctor",
+"table": 23573,
+"func": 115696
+},
+{
+"rid": 184,
+"type": "<PlayWoodSound>d__56",
+"method": "RotateLevel",
+"table": 23574,
+"func": 115650
+},
+{
+"rid": 185,
+"type": "<PlayWoodSound>d__56",
+"method": "add_OnTrialCompleted",
+"table": 23575,
+"func": 115697
+},
+{
+"rid": 186,
+"type": "<PlayWoodSound>d__56",
+"method": "remove_OnTrialCompleted",
+"table": 23576,
+"func": 115698
+},
+{
+"rid": 187,
+"type": "<PlayWoodSound>d__56",
+"method": "get_WheelAnimator",
+"table": 23577,
+"func": 115622
+},
+{
+"rid": 188,
+"type": "<PlayWoodSound>d__56",
+"method": "Center",
+"table": 23578,
+"func": 115575
+},
+{
+"rid": 189,
+"type": "<PlayWoodSound>d__56",
+"method": "SetupTrialObject",
+"table": 23579,
+"func": 115643
+},
+{
+"rid": 190,
+"type": "PuzzleView",
+"method": "PlayIntroTableAnimation",
+"table": 23580,
+"func": 115602
+},
+{
+"rid": 191,
+"type": "PuzzleView",
+"method": "PlayWoodSound",
+"table": 23581,
+"func": 115699
+},
+{
+"rid": 192,
+"type": "PuzzleView",
+"method": "DisableIntroTableAnimation",
+"table": 23582,
+"func": 115559
+},
+{
+"rid": 193,
+"type": "PuzzleView",
+"method": "Populate",
+"table": 23583,
+"func": 115647
+},
+{
+"rid": 194,
+"type": "PuzzleView",
+"method": "PopulateHints",
+"table": 23584,
+"func": 115651
+},
+{
+"rid": 195,
+"type": "PuzzleView",
+"method": "PopulateDrag",
+"table": 23585,
+"func": 115700
+},
+{
+"rid": 196,
+"type": "PuzzleView",
+"method": "Setup",
+"table": 23586,
+"func": 115604
+},
+{
+"rid": 197,
+"type": "PuzzleView",
+"method": "SetLevelStates",
+"table": 23587,
+"func": 115605
+},
+{
+"rid": 198,
+"type": "PuzzleView",
+"method": "SetScoreReduceText",
+"table": 23588,
+"func": 115594
+},
+{
+"rid": 199,
+"type": "PuzzleView",
+"method": "IsShapeValid",
+"table": 23589,
+"func": 115657
+},
+{
+"rid": 200,
+"type": "PuzzleView",
+"method": "EnableDrag",
+"table": 23590,
+"func": 115611
+},
+{
+"rid": 201,
+"type": "PuzzleView",
+"method": "UpdateShowLevels",
+"table": 23591,
+"func": 115547
+},
+{
+"rid": 202,
+"type": "PuzzleView",
+"method": "ShowLevels",
+"table": 23592,
+"func": 115549
+},
+{
+"rid": 203,
+"type": "PuzzleView",
+"method": "EnableAnimator",
+"table": 23593,
+"func": 115701
+},
+{
+"rid": 204,
+"type": "PuzzleView",
+"method": "PauseIn",
+"table": 23594,
+"func": 115546
+},
+{
+"rid": 205,
+"type": "PuzzleView",
+"method": "PauseOut",
+"table": 23595,
+"func": 115550
+},
+{
+"rid": 206,
+"type": "PuzzleView",
+"method": "PauseTableObjects",
+"table": 23596,
+"func": 115702
+},
+{
+"rid": 207,
+"type": "PuzzleView",
+"method": "ResetView",
+"table": 23597,
+"func": 115558
+},
+{
+"rid": 208,
+"type": "PuzzleView",
+"method": "EnableWebCursor",
+"table": 23598,
+"func": 115560
+},
+{
+"rid": 209,
+"type": "PuzzleView",
+"method": "Reset",
+"table": 23599,
+"func": 115564
+},
+{
+"rid": 210,
+"type": "PuzzleView",
+"method": "SetSilhouetteLevelFoAutoPlay",
+"table": 23600,
+"func": 115654
+},
+{
+"rid": 211,
+"type": "PuzzleView",
+"method": "SortingPieceArray",
+"table": 23601,
+"func": 115648
+},
+{
+"rid": 212,
+"type": "PuzzleView",
+"method": "StartAutoPlayAnswer",
+"table": 23602,
+"func": 115670
+},
+{
+"rid": 213,
+"type": "PuzzleView",
+"method": "SetUpPlatform",
+"table": 23603,
+"func": 115652
+},
+{
+"rid": 214,
+"type": "PuzzleView",
+"method": ".ctor",
+"table": 23604,
+"func": 115703
+},
+{
+"rid": 215,
+"type": "PuzzleView",
+"method": ".cctor",
+"table": 23605,
+"func": 115704
+},
+{
+"rid": 216,
+"type": "PuzzleView",
+"method": ".ctor",
+"table": 23606,
+"func": 4396
+},
+{
+"rid": 217,
+"type": "PuzzleView",
+"method": "System.IDisposable.Dispose",
+"table": 23607,
+"func": 735
+},
+{
+"rid": 218,
+"type": "PuzzleView",
+"method": "MoveNext",
+"table": 23608,
+"func": 115705
+},
+{
+"rid": 219,
+"type": "PuzzleView",
+"method": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+"table": 23609,
+"func": 4381
+},
+{
+"rid": 220,
+"type": "PuzzleView",
+"method": "System.Collections.IEnumerator.Reset",
+"table": 23610,
+"func": 115706
+},
+{
+"rid": 221,
+"type": "PuzzleView",
+"method": "System.Collections.IEnumerator.get_Current",
+"table": 23611,
+"func": 4381
+},
+{
+"rid": 222,
+"type": "Silhouette",
+"method": ".ctor",
+"table": 23612,
+"func": 115707
+},
+{
+"rid": 223,
+"type": "SilhouetteModel",
+"method": ".ctor",
+"table": 23613,
+"func": 115541
+},
+{
+"rid": 224,
+"type": "SilhouetteModel",
+"method": "Init",
+"table": 23614,
+"func": 115542
+},
+{
+"rid": 225,
+"type": "SilhouetteModel",
+"method": "MeasureRotationDistance",
+"table": 23615,
+"func": 115708
+},
+{
+"rid": 226,
+"type": "SilhouetteModel",
+"method": "IsEachPieceClose",
+"table": 23616,
+"func": 115627
+},
+{
+"rid": 227,
+"type": "SilhouetteModel",
+"method": "IsOverlapClose",
+"table": 23617,
+"func": 115628
+},
+{
+"rid": 228,
+"type": "SilhouetteModel",
+"method": "HighlightTestPoint",
+"table": 23618,
+"func": 2276
+},
+{
+"rid": 229,
+"type": "SilhouetteModel",
+"method": "Setup",
+"table": 23619,
+"func": 115656
+},
+{
+"rid": 230,
+"type": "SilhouetteModel",
+"method": "IsOverlap",
+"table": 23620,
+"func": 115640
+},
+{
+"rid": 231,
+"type": "SilhouetteModel",
+"method": "Cache",
+"table": 23621,
+"func": 115626
+},
+{
+"rid": 232,
+"type": "SilhouetteModel",
+"method": "CacheSensors",
+"table": 23622,
+"func": 115711
+},
+{
+"rid": 233,
+"type": "SilhouetteModel",
+"method": ".cctor",
+"table": 23623,
+"func": 115713
+},
+{
+"rid": 234,
+"type": "SilhouetteReader",
+"method": ".ctor",
+"table": 23624,
+"func": 115534
+},
+{
+"rid": 235,
+"type": "SilhouetteReader",
+"method": "Setup",
+"table": 23625,
+"func": 115535
+},
+{
+"rid": 236,
+"type": "SilhouetteReader",
+"method": "GetLevelCount",
+"table": 23626,
+"func": 115687
+},
+{
+"rid": 237,
+"type": "SilhouetteReader",
+"method": "CacheBitAddresses",
+"table": 23627,
+"func": 115680
+},
+{
+"rid": 238,
+"type": "SilhouetteReader",
+"method": "GetOriginalIndex",
+"table": 23628,
+"func": 115686
+},
+{
+"rid": 239,
+"type": "SilhouetteReader",
+"method": "LoadLevel",
+"table": 23629,
+"func": 115685
+},
+{
+"rid": 240,
+"type": "SilhouetteReader",
+"method": "LoadLevelFromCsv",
+"table": 23630,
+"func": 115685
+},
+{
+"rid": 241,
+"type": "SilhouetteReader",
+"method": "ReadAllLevels",
+"table": 23631,
+"func": 115714
+},
+{
+"rid": 242,
+"type": "SilhouetteReader",
+"method": "GetLevelFromString",
+"table": 23632,
+"func": 115684
+},
+{
+"rid": 243,
+"type": "SilhouetteView",
+"method": "IsOverlapXY",
+"table": 23633,
+"func": 115710
+},
+{
+"rid": 244,
+"type": "SilhouetteView",
+"method": "SetParent",
+"table": 23634,
+"func": 115712
+},
+{
+"rid": 245,
+"type": "SilhouetteView",
+"method": "SetPiecesParent",
+"table": 23635,
+"func": 115715
+},
+{
+"rid": 246,
+"type": "SilhouetteView",
+"method": "SetTargetParent",
+"table": 23636,
+"func": 115716
+},
+{
+"rid": 247,
+"type": "SilhouetteView",
+"method": "CountPieceOverlapXY",
+"table": 23637,
+"func": 115709
+},
+{
+"rid": 248,
+"type": "SilhouetteView",
+"method": "Setup",
+"table": 23638,
+"func": 115603
+},
+{
+"rid": 249,
+"type": "SilhouetteView",
+"method": "CreateLevelView",
+"table": 23639,
+"func": 115644
+},
+{
+"rid": 250,
+"type": "SilhouetteView",
+"method": "GetNames",
+"table": 23640,
+"func": 115606
+},
+{
+"rid": 251,
+"type": "SilhouetteView",
+"method": "SetChildrenVisible",
+"table": 23641,
+"func": 115717
+},
+{
+"rid": 252,
+"type": "SilhouetteView",
+"method": "AddPiece",
+"table": 23642,
+"func": 115718
+},
+{
+"rid": 253,
+"type": "SilhouetteView",
+"method": "Create",
+"table": 23643,
+"func": 115607
+},
+{
+"rid": 254,
+"type": "SilhouetteView",
+"method": "SetColorOnChildren",
+"table": 23644,
+"func": 115720
+},
+{
+"rid": 255,
+"type": "SilhouetteView",
+"method": "CreateTargets",
+"table": 23645,
+"func": 115649
+},
+{
+"rid": 256,
+"type": "SilhouetteView",
+"method": "SetLayerInt",
+"table": 23646,
+"func": 115719
+},
+{
+"rid": 257,
+"type": "SilhouetteView",
+"method": "CreateHints",
+"table": 23647,
+"func": 115655
+},
+{
+"rid": 258,
+"type": "SilhouetteView",
+"method": ".ctor",
+"table": 23648,
+"func": 115539
+},
+{
+"rid": 259,
+"type": "SpatialReasoningReferee",
+"method": "Setup",
+"table": 23649,
+"func": 115681
+},
+{
+"rid": 260,
+"type": "SpatialReasoningReferee",
+"method": "SetupExperiment",
+"table": 23650,
+"func": 115722
+},
+{
+"rid": 261,
+"type": "SpatialReasoningReferee",
+"method": "SetupRefereeExperiment",
+"table": 23651,
+"func": 115721
+},
+{
+"rid": 262,
+"type": "SpatialReasoningReferee",
+"method": "OnBegin",
+"table": 23652,
+"func": 115682
+},
+{
+"rid": 263,
+"type": "SpatialReasoningReferee",
+"method": "SetBudget",
+"table": 23653,
+"func": 115645
+},
+{
+"rid": 264,
+"type": "SpatialReasoningReferee",
+"method": "PerfectRotationBonus",
+"table": 23654,
+"func": 115724
+},
+{
+"rid": 265,
+"type": "SpatialReasoningReferee",
+"method": "NextTrialLevel",
+"table": 23655,
+"func": 115629
+},
+{
+"rid": 266,
+"type": "SpatialReasoningReferee",
+"method": "StartTrial",
+"table": 23656,
+"func": 115688
+},
+{
+"rid": 267,
+"type": "SpatialReasoningReferee",
+"method": "EndTrial",
+"table": 23657,
+"func": 115689
+},
+{
+"rid": 268,
+"type": "SpatialReasoningReferee",
+"method": "AddMove",
+"table": 23658,
+"func": 115691
+},
+{
+"rid": 269,
+"type": "SpatialReasoningReferee",
+"method": "FormatCountOfMax",
+"table": 23659,
+"func": 115625
+},
+{
+"rid": 270,
+"type": "SpatialReasoningReferee",
+"method": "RotationChangeScoreText",
+"table": 23660,
+"func": 115593
+},
+{
+"rid": 271,
+"type": "SpatialReasoningReferee",
+"method": "PerfectRotationsText",
+"table": 23661,
+"func": 115639
+},
+{
+"rid": 272,
+"type": "SpatialReasoningReferee",
+"method": "MovesText",
+"table": 23662,
+"func": 115595
+},
+{
+"rid": 273,
+"type": "SpatialReasoningReferee",
+"method": "UpdateMovesRemaining",
+"table": 23663,
+"func": 115726
+},
+{
+"rid": 274,
+"type": "SpatialReasoningReferee",
+"method": "ResetRotationFeedback",
+"table": 23664,
+"func": 115723
+},
+{
+"rid": 275,
+"type": "SpatialReasoningReferee",
+"method": "Penalty",
+"table": 23665,
+"func": 115725
+},
+{
+"rid": 276,
+"type": "SpatialReasoningReferee",
+"method": "Hint",
+"table": 23666,
+"func": 115592
+},
+{
+"rid": 277,
+"type": "SpatialReasoningReferee",
+"method": "UpdateRotationBonus",
+"table": 23667,
+"func": 115590
+},
+{
+"rid": 278,
+"type": "SpatialReasoningReferee",
+"method": "TrialPerformanceName",
+"table": 23668,
+"func": 115642
+},
+{
+"rid": 279,
+"type": "SpatialReasoningReferee",
+"method": "Update",
+"table": 23669,
+"func": 115693
+},
+{
+"rid": 280,
+"type": "SpatialReasoningReferee",
+"method": "MovesNormal",
+"table": 23670,
+"func": 115694
+},
+{
+"rid": 281,
+"type": "SpatialReasoningReferee",
+"method": "OnEndGameplay",
+"table": 23671,
+"func": 115635
+},
+{
+"rid": 282,
+"type": "SpatialReasoningReferee",
+"method": "ResetLevelAfterTutorial",
+"table": 23672,
+"func": 115555
+},
+{
+"rid": 283,
+"type": "SpatialReasoningReferee",
+"method": ".ctor",
+"table": 23673,
+"func": 115679
+},
+{
+"rid": 284,
+"type": "SpatialReasoningReferee",
+"method": ".cctor",
+"table": 23674,
+"func": 115727
+},
+{
+"rid": 285,
+"type": "MasterpiecePlayStateController",
+"method": "get_State",
+"table": 23675,
+"func": 115728
+},
+{
+"rid": 286,
+"type": "MasterpiecePlayStateController",
+"method": "OnEnterState",
+"table": 23676,
+"func": 115729
+},
+{
+"rid": 287,
+"type": "MasterpiecePlayStateController",
+"method": "OnExitState",
+"table": 23677,
+"func": 115730
+},
+{
+"rid": 288,
+"type": "MasterpiecePlayStateController",
+"method": "HandleSessionCompleted",
+"table": 23678,
+"func": 19920
+},
+{
+"rid": 289,
+"type": "MasterpiecePlayStateController",
+"method": ".ctor",
+"table": 23679,
+"func": 115731
+},
+{
+"rid": 290,
+"type": "MasterpieceRestartStateController",
+"method": "get_State",
+"table": 23680,
+"func": 115281
+},
+{
+"rid": 291,
+"type": "MasterpieceRestartStateController",
+"method": "OnEnterState",
+"table": 23681,
+"func": 115282
+},
+{
+"rid": 292,
+"type": "MasterpieceRestartStateController",
+"method": "OnExitState",
+"table": 23682,
+"func": 735
+},
+{
+"rid": 293,
+"type": "MasterpieceRestartStateController",
+"method": ".ctor",
+"table": 23683,
+"func": 115283
+},
+{
+"rid": 294,
+"type": "AnimationHelper",
+"method": "Format",
+"table": 23684,
+"func": 115284
+},
+{
+"rid": 295,
+"type": "AnimationHelper",
+"method": "GetState",
+"table": 23685,
+"func": 115286
+},
+{
+"rid": 296,
+"type": "AnimationHelper",
+"method": "SetState",
+"table": 23686,
+"func": 115287
+},
+{
+"rid": 297,
+"type": "AnimationHelper",
+"method": "CompletedNow",
+"table": 23687,
+"func": 115288
+},
+{
+"rid": 298,
+"type": "AnimationHelper",
+"method": "IsComplete",
+"table": 23688,
+"func": 115289
+},
+{
+"rid": 299,
+"type": "AnimationHelper",
+"method": "MayLogComplete",
+"table": 23689,
+"func": 115290
+},
+{
+"rid": 300,
+"type": "AnimationHelper",
+"method": "LogCompletedNow",
+"table": 23690,
+"func": 115291
+},
+{
+"rid": 301,
+"type": "AnimationHelper",
+"method": "LogActive",
+"table": 23691,
+"func": 115292
+},
+{
+"rid": 302,
+"type": "AnimationHelper",
+"method": ".cctor",
+"table": 23692,
+"func": 115293
+},
+{
+"rid": 303,
+"type": "ButtonWithChildren",
+"method": "OnPointerDown",
+"table": 23693,
+"func": 115294
+},
+{
+"rid": 304,
+"type": "ButtonWithChildren",
+"method": "OnPointerUp",
+"table": 23694,
+"func": 115295
+},
+{
+"rid": 305,
+"type": "ButtonWithChildren",
+"method": "NormalButtonActive",
+"table": 23695,
+"func": 115296
+},
+{
+"rid": 306,
+"type": "ButtonWithChildren",
+"method": "DisableButtonActive",
+"table": 23696,
+"func": 115297
+},
+{
+"rid": 307,
+"type": "ButtonWithChildren",
+"method": ".ctor",
+"table": 23697,
+"func": 9457
+},
+{
+"rid": 308,
+"type": "GraphicsPathData",
+"method": ".cctor",
+"table": 23698,
+"func": 115298
+},
+{
+"rid": 309,
+"type": "GraphicsSnapData",
+"method": ".cctor",
+"table": 23699,
+"func": 115299
+},
+{
+"rid": 310,
+"type": "SnapDataSet",
+"method": ".ctor",
+"table": 23700,
+"func": 115300
+},
+{
+"rid": 311,
+"type": "SceneNodeModel",
+"method": ".ctor",
+"table": 23701,
+"func": 115301
+},
+{
+"rid": 312,
+"type": "SceneNodeView",
+"method": "GetChild",
+"table": 23702,
+"func": 115302
+},
+{
+"rid": 313,
+"type": "SceneNodeView",
+"method": "GetParent",
+"table": 23703,
+"func": 115303
+},
+{
+"rid": 314,
+"type": "SceneNodeView",
+"method": "GetAddress",
+"table": 23704,
+"func": 115285
+},
+{
+"rid": 315,
+"type": "SceneNodeView",
+"method": "AddChild",
+"table": 23705,
+"func": 115304
+},
+{
+"rid": 316,
+"type": "SceneNodeView",
+"method": "GetChildren",
+"table": 23706,
+"func": 115305
+},
+{
+"rid": 317,
+"type": "SceneNodeView",
+"method": "DestroyChildren",
+"table": 23707,
+"func": 115306
+},
+{
+"rid": 318,
+"type": "SceneNodeView",
+"method": "GetName",
+"table": 23708,
+"func": 115307
+},
+{
+"rid": 319,
+"type": "SceneNodeView",
+"method": "SetName",
+"table": 23709,
+"func": 115308
+},
+{
+"rid": 320,
+"type": "SceneNodeView",
+"method": "GetLocalX",
+"table": 23710,
+"func": 115309
+},
+{
+"rid": 321,
+"type": "SceneNodeView",
+"method": "GetLocalY",
+"table": 23711,
+"func": 115310
+},
+{
+"rid": 322,
+"type": "SceneNodeView",
+"method": "SetLocalX",
+"table": 23712,
+"func": 115311
+},
+{
+"rid": 323,
+"type": "SceneNodeView",
+"method": "SetLocalY",
+"table": 23713,
+"func": 115312
+},
+{
+"rid": 324,
+"type": "SceneNodeView",
+"method": "SetLocalXY",
+"table": 23714,
+"func": 115313
+},
+{
+"rid": 325,
+"type": "SceneNodeView",
+"method": "GetWorldXY",
+"table": 23715,
+"func": 115314
+},
+{
+"rid": 326,
+"type": "SceneNodeView",
+"method": "GetWorldX",
+"table": 23716,
+"func": 115315
+},
+{
+"rid": 327,
+"type": "SceneNodeView",
+"method": "GetWorldY",
+"table": 23717,
+"func": 115316
+},
+{
+"rid": 328,
+"type": "SceneNodeView",
+"method": "GetWorldZ",
+"table": 23718,
+"func": 115317
+},
+{
+"rid": 329,
+"type": "SceneNodeView",
+"method": "SetWorldXY",
+"table": 23719,
+"func": 115318
+},
+{
+"rid": 330,
+"type": "SceneNodeView",
+"method": "SetWorldZ",
+"table": 23720,
+"func": 115319
+},
+{
+"rid": 331,
+"type": "SceneNodeView",
+"method": "SetLocalScaleXY",
+"table": 23721,
+"func": 115320
+},
+{
+"rid": 332,
+"type": "SceneNodeView",
+"method": "GetVisible",
+"table": 23722,
+"func": 115321
+},
+{
+"rid": 333,
+"type": "SceneNodeView",
+"method": "SetVisible",
+"table": 23389,
+"func": 115322
+},
+{
+"rid": 334,
+"type": "SceneNodeView",
+"method": "Rotate",
+"table": 23723,
+"func": 115323
+},
+{
+"rid": 335,
+"type": "SceneNodeView",
+"method": "GetWorldRotationZ",
+"table": 23724,
+"func": 115324
+},
+{
+"rid": 336,
+"type": "SceneNodeView",
+"method": "GetRotationZ",
+"table": 23725,
+"func": 115325
+},
+{
+"rid": 337,
+"type": "SceneNodeView",
+"method": "SetRotationZ",
+"table": 23726,
+"func": 115326
+},
+{
+"rid": 338,
+"type": "SceneNodeView",
+"method": "Reposition",
+"table": 23727,
+"func": 115327
+},
+{
+"rid": 339,
+"type": "SceneNodeView",
+"method": "SetMaterial",
+"table": 23728,
+"func": 115328
+},
+{
+"rid": 340,
+"type": "SceneNodeView",
+"method": "SetMaterialOnChildren",
+"table": 23729,
+"func": 115329
+},
+{
+"rid": 341,
+"type": "SceneNodeView",
+"method": "Model",
+"table": 23730,
+"func": 115330
+},
+{
+"rid": 342,
+"type": "SceneNodeView",
+"method": "WorldModel",
+"table": 23731,
+"func": 115331
+},
+{
+"rid": 343,
+"type": "SceneNodeView",
+"method": "ListWorldModels",
+"table": 23732,
+"func": 115332
+},
+{
+"rid": 344,
+"type": "SceneNodeView",
+"method": "RepositionToModel",
+"table": 23733,
+"func": 115333
+},
+{
+"rid": 345,
+"type": "SceneNodeView",
+"method": "ModelChildrenByName",
+"table": 23734,
+"func": 115334
+},
+{
+"rid": 346,
+"type": "SceneNodeView",
+"method": "LocalToGlobal",
+"table": 23735,
+"func": 115335
+},
+{
+"rid": 347,
+"type": "SnapToPoint",
+"method": "WorldMove",
+"table": 23736,
+"func": 115336
+},
+{
+"rid": 348,
+"type": "SnapToPoint",
+"method": ".ctor",
+"table": 23737,
+"func": 115337
+},
+{
+"rid": 349,
+"type": "SnapToPoint",
+"method": "SetOriginalPosition",
+"table": 23738,
+"func": 115338
+},
+{
+"rid": 350,
+"type": "SnapToPoint",
+"method": "FindOffset",
+"table": 23739,
+"func": 115339
+},
+{
+"rid": 351,
+"type": "SnapToPoint",
+"method": "FindNear",
+"table": 23740,
+"func": 115340
+},
+{
+"rid": 352,
+"type": "SnapToPoint",
+"method": "ToString",
+"table": 23741,
+"func": 115341
+},
+{
+"rid": 353,
+"type": "SnapToPoint",
+"method": "MapPoints",
+"table": 23382,
+"func": 115342
+},
+{
+"rid": 354,
+"type": "SnapToPoint",
+"method": "Setup",
+"table": 23742,
+"func": 115343
+},
+{
+"rid": 355,
+"type": "SnapToPoint",
+"method": "IsSetup",
+"table": 23743,
+"func": 115346
+},
+{
+"rid": 356,
+"type": "SnapToPoint",
+"method": "Clear",
+"table": 23744,
+"func": 115345
+},
+{
+"rid": 357,
+"type": "SnapToPoint",
+"method": "AddChildren",
+"table": 23745,
+"func": 115344
+},
+{
+"rid": 358,
+"type": "SnapToPoint",
+"method": "UpdateChild",
+"table": 23746,
+"func": 115347
+},
+{
+"rid": 359,
+"type": "SnapToPoint",
+"method": "CheckPieceProximity",
+"table": 23747,
+"func": 115348
+},
+{
+"rid": 360,
+"type": "SnapToPoint",
+"method": "LogProximityMatch",
+"table": 23381,
+"func": 115350
+},
+{
+"rid": 361,
+"type": "SnapToPoint",
+"method": "LogSnapDetails",
+"table": 23748,
+"func": 115349
+},
+{
+"rid": 362,
+"type": "SnapToPoint",
+"method": "TweenPosition",
+"table": 23749,
+"func": 115352
+},
+{
+"rid": 363,
+"type": "SnapToPoint",
+"method": "TweenRotation",
+"table": 23750,
+"func": 115354
+},
+{
+"rid": 364,
+"type": "TweenHelper",
+"method": "Kill",
+"table": 23751,
+"func": 115355
+},
+{
+"rid": 365,
+"type": "TweenHelper",
+"method": "LocalRotateZ",
+"table": 23752,
+"func": 115356
+},
+{
+"rid": 366,
+"type": "TweenHelper",
+"method": "WorldMoveXY",
+"table": 23753,
+"func": 115353
+},
+{
+"rid": 367,
+"type": "PlaySessionCmd",
+"method": ".cctor",
+"table": 23754,
+"func": 115357
+},
+{
+"rid": 368,
+"type": "PlaySessionController",
+"method": "Initialize",
+"table": 23755,
+"func": 115358
+},
+{
+"rid": 369,
+"type": "PlaySessionController",
+"method": "RegisterCommands",
+"table": 23756,
+"func": 115359
+},
+{
+"rid": 370,
+"type": "PlaySessionController",
+"method": "RegisterNotifications",
+"table": 23757,
+"func": 115360
+},
+{
+"rid": 371,
+"type": "PlaySessionController",
+"method": "HandleStartCommand",
+"table": 23758,
+"func": 115361
+},
+{
+"rid": 372,
+"type": "PlaySessionController",
+"method": "HandleResetCommand",
+"table": 23759,
+"func": 115362
+},
+{
+"rid": 373,
+"type": "PlaySessionController",
+"method": "HandleSessionEnded",
+"table": 23760,
+"func": 115363
+},
+{
+"rid": 374,
+"type": "PlaySessionController",
+"method": ".ctor",
+"table": 23761,
+"func": 19569
+},
+{
+"rid": 375,
+"type": "PlaySessionNote",
+"method": ".cctor",
+"table": 23762,
+"func": 115364
+},
+{
+"rid": 376,
+"type": "BinaryFile",
+"method": "Read",
+"table": 23763,
+"func": 115365
+},
+{
+"rid": 377,
+"type": "BinaryFile",
+"method": "ReadStream",
+"table": 23764,
+"func": 115367
+},
+{
+"rid": 378,
+"type": "BinaryFile",
+"method": ".ctor",
+"table": 23765,
+"func": 735
+},
+{
+"rid": 379,
+"type": "BitReader",
+"method": ".ctor",
+"table": 23766,
+"func": 115369
+},
+{
+"rid": 380,
+"type": "CameraView",
+"method": "GetCamera",
+"table": 23767,
+"func": 115370
+},
+{
+"rid": 381,
+"type": "CameraView",
+"method": "ToParentPoint",
+"table": 23768,
+"func": 115371
+},
+{
+"rid": 382,
+"type": "CameraView",
+"method": "Clamp2",
+"table": 23769,
+"func": 115372
+},
+{
+"rid": 383,
+"type": "CameraView",
+"method": "Clamp3",
+"table": 23770,
+"func": 115373
+},
+{
+"rid": 384,
+"type": "Center",
+"method": "CalculateOffset",
+"table": 23771,
+"func": 115374
+},
+{
+"rid": 385,
+"type": "ColliderShapeCount",
+"method": "Add",
+"table": 23772,
+"func": 115375
+},
+{
+"rid": 386,
+"type": "ColliderShapeCount",
+"method": "AddList",
+"table": 23773,
+"func": 115376
+},
+{
+"rid": 387,
+"type": "ColliderShapeCount",
+"method": "IsEqual",
+"table": 23774,
+"func": 115377
+},
+{
+"rid": 388,
+"type": "ColliderShapeCount",
+"method": "AreChildrenEqual",
+"table": 23775,
+"func": 115378
+},
+{
+"rid": 389,
+"type": "ColliderShapeCount",
+"method": ".ctor",
+"table": 23776,
+"func": 115379
+},
+{
+"rid": 390,
+"type": "DragView",
+"method": "LocalClamp2",
+"table": 23777,
+"func": 115380
+},
+{
+"rid": 391,
+"type": "DragView",
+"method": "HasInput",
+"table": 23778,
+"func": 115381
+},
+{
+"rid": 392,
+"type": "DragView",
+"method": "InputWorldZ",
+"table": 23779,
+"func": 115382
+},
+{
+"rid": 393,
+"type": "DragView",
+"method": "SetLayerName",
+"table": 23780,
+"func": 115383
+},
+{
+"rid": 394,
+"type": "DragView",
+"method": "SetLayerInt",
+"table": 23781,
+"func": 115384
+},
+{
+"rid": 395,
+"type": "DragView",
+"method": "SetLayerMask",
+"table": 23782,
+"func": 115385
+},
+{
+"rid": 396,
+"type": "DragView",
+"method": ".ctor",
+"table": 23783,
+"func": 115386
+},
+{
+"rid": 397,
+"type": "DragView",
+"method": "Setup",
+"table": 23784,
+"func": 115388
+},
+{
+"rid": 398,
+"type": "DragView",
+"method": "SetEnabled",
+"table": 23785,
+"func": 115389
+},
+{
+"rid": 399,
+"type": "DragView",
+"method": "EnableEach",
+"table": 23786,
+"func": 115390
+},
+{
+"rid": 400,
+"type": "DragView",
+"method": "Enable",
+"table": 23787,
+"func": 115391
+},
+{
+"rid": 401,
+"type": "DragView",
+"method": "Details",
+"table": 23788,
+"func": 115392
+},
+{
+"rid": 402,
+"type": "DragView",
+"method": "Update",
+"table": 23789,
+"func": 115394
+},
+{
+"rid": 403,
+"type": "DragView",
+"method": "UpdateClamp",
+"table": 23790,
+"func": 115397
+},
+{
+"rid": 404,
+"type": "DragView",
+"method": "SetLocalBounds",
+"table": 23791,
+"func": 115402
+},
+{
+"rid": 405,
+"type": "DragView",
+"method": "CurrentTouchPosition",
+"table": 23792,
+"func": 115399
+},
+{
+"rid": 406,
+"type": "DragView",
+"method": "DragOrPickUp",
+"table": 23793,
+"func": 115396
+},
+{
+"rid": 407,
+"type": "DragView",
+"method": "resetOnTrial",
+"table": 23794,
+"func": 115404
+},
+{
+"rid": 408,
+"type": "DragView",
+"method": "HasInput",
+"table": 23795,
+"func": 115395
+},
+{
+"rid": 409,
+"type": "DragView",
+"method": "DropItem",
+"table": 23796,
+"func": 115398
+},
+{
+"rid": 410,
+"type": "FileView",
+"method": "NormalizeLines",
+"table": 23797,
+"func": 115405
+},
+{
+"rid": 411,
+"type": "FileView",
+"method": "Load",
+"table": 23798,
+"func": 115366
+},
+{
+"rid": 412,
+"type": "FileView",
+"method": "Read",
+"table": 23799,
+"func": 115406
+},
+{
+"rid": 413,
+"type": "FileView",
+"method": "ReadJson",
+"table": 23800,
+"func": 115407
+},
+{
+"rid": 414,
+"type": "FileView",
+"method": "StreamBytes",
+"table": 23801,
+"func": 115368
+},
+{
+"rid": 415,
+"type": "FileView",
+"method": "StreamAsset",
+"table": 23802,
+"func": 115408
+},
+{
+"rid": 416,
+"type": "Front",
+"method": ".ctor",
+"table": 23803,
+"func": 115387
+},
+{
+"rid": 417,
+"type": "Front",
+"method": "Sort",
+"table": 23804,
+"func": 115403
+},
+{
+"rid": 418,
+"type": "Front",
+"method": "GetFront",
+"table": 23805,
+"func": 115409
+},
+{
+"rid": 419,
+"type": "Front",
+"method": "BringToFront",
+"table": 23806,
+"func": 115401
+},
+{
+"rid": 420,
+"type": "Front",
+"method": "CircleOverlapsXY",
+"table": 23807,
+"func": 115400
+},
+{
+"rid": 421,
+"type": "Front",
+"method": "ToString",
+"table": 23808,
+"func": 115393
+},
+{
+"rid": 422,
+"type": "Geometry",
+"method": "ToPoints",
+"table": 23809,
+"func": 115410
+},
+{
+"rid": 423,
+"type": "Geometry",
+"method": ".cctor",
+"table": 23810,
+"func": 115411
+},
+{
+"rid": 424,
+"type": "Matrix2D",
+"method": "SetDegrees",
+"table": 23811,
+"func": 115412
+},
+{
+"rid": 425,
+"type": "Matrix2D",
+"method": "Transform",
+"table": 23812,
+"func": 115413
+},
+{
+"rid": 426,
+"type": "Matrix2D",
+"method": ".ctor",
+"table": 23813,
+"func": 115414
+},
+{
+"rid": 427,
+"type": "PhysicsUtil",
+"method": "ToPointsArray",
+"table": 23814,
+"func": 115415
+},
+{
+"rid": 428,
+"type": "PhysicsUtil",
+"method": "GetPolygon",
+"table": 23815,
+"func": 115416
+},
+{
+"rid": 429,
+"type": "PhysicsUtil",
+"method": "SetPolygonPoints",
+"table": 23816,
+"func": 115417
+},
+{
+"rid": 430,
+"type": "Polygon",
+"method": "CenterOffset",
+"table": 23817,
+"func": 115418
+},
+{
+"rid": 431,
+"type": "Referee",
+"method": "SetLevel",
+"table": 23818,
+"func": 115419
+},
+{
+"rid": 432,
+"type": "Referee",
+"method": "OnBegin",
+"table": 23819,
+"func": 115420
+},
+{
+"rid": 433,
+"type": "Referee",
+"method": "Accelerate",
+"table": 23820,
+"func": 115423
+},
+{
+"rid": 434,
+"type": "Referee",
+"method": "NextTrialLevel",
+"table": 23821,
+"func": 115424
+},
+{
+"rid": 435,
+"type": "Referee",
+"method": "NextWeightedLevel",
+"table": 23822,
+"func": 115425
+},
+{
+"rid": 436,
+"type": "Referee",
+"method": "InverseWeightedLevel",
+"table": 23823,
+"func": 115426
+},
+{
+"rid": 437,
+"type": "Referee",
+"method": "NextScoreLevel",
+"table": 23824,
+"func": 115427
+},
+{
+"rid": 438,
+"type": "Referee",
+"method": "NextTrial",
+"table": 23825,
+"func": 115428
+},
+{
+"rid": 439,
+"type": "Referee",
+"method": "GetLevelUpFraction",
+"table": 23826,
+"func": 115430
+},
+{
+"rid": 440,
+"type": "Referee",
+"method": "Update",
+"table": 23827,
+"func": 115431
+},
+{
+"rid": 441,
+"type": "Referee",
+"method": "LevelNormal",
+"table": 23828,
+"func": 115432
+},
+{
+"rid": 442,
+"type": "Referee",
+"method": "SetupResponseTime",
+"table": 23829,
+"func": 115433
+},
+{
+"rid": 443,
+"type": "Referee",
+"method": "InterpolateResponseTime",
+"table": 23830,
+"func": 115421
+},
+{
+"rid": 444,
+"type": "Referee",
+"method": "InterpolateHint",
+"table": 23831,
+"func": 115422
+},
+{
+"rid": 445,
+"type": "Referee",
+"method": "ToIndex",
+"table": 23832,
+"func": 115434
+},
+{
+"rid": 446,
+"type": "Referee",
+"method": "SampleIndex",
+"table": 23833,
+"func": 115435
+},
+{
+"rid": 447,
+"type": "Referee",
+"method": "CreateIndexes",
+"table": 23834,
+"func": 115436
+},
+{
+"rid": 448,
+"type": "Referee",
+"method": "PopFromIndexes",
+"table": 23835,
+"func": 115437
+},
+{
+"rid": 449,
+"type": "Referee",
+"method": "RoundUpToTen",
+"table": 23836,
+"func": 115438
+},
+{
+"rid": 450,
+"type": "Referee",
+"method": "CalculatePoints",
+"table": 23837,
+"func": 115429
+},
+{
+"rid": 451,
+"type": "Referee",
+"method": ".ctor",
+"table": 23838,
+"func": 115439
+},
+{
+"rid": 452,
+"type": "MpTutorialCmd",
+"method": ".cctor",
+"table": 23839,
+"func": 115440
+},
+{
+"rid": 453,
+"type": "<ShowDottedLineAnimation>d__13",
+"method": "Initialize",
+"table": 23840,
+"func": 115441
+},
+{
+"rid": 454,
+"type": "<ShowDottedLineAnimation>d__13",
+"method": "RegisterCommands",
+"table": 23841,
+"func": 115442
+},
+{
+"rid": 455,
+"type": "<ShowDottedLineAnimation>d__13",
+"method": "ShowHandHint",
+"table": 23842,
+"func": 115443
+},
+{
+"rid": 456,
+"type": "<ShowDottedLineAnimation>d__13",
+"method": "AbortHandHint",
+"table": 23843,
+"func": 115444
+},
+{
+"rid": 457,
+"type": "<ShowDottedLineAnimation>d__13",
+"method": "ShowDottedLine",
+"table": 23844,
+"func": 115445
+},
+{
+"rid": 458,
+"type": "<ShowDottedLineAnimation>d__13",
+"method": "ShowDottedLineAnimation",
+"table": 23845,
+"func": 115446
+},
+{
+"rid": 459,
+"type": "<ShowHintAnim>d__16",
+"method": "HideDottedLine",
+"table": 23846,
+"func": 115447
+},
+{
+"rid": 460,
+"type": "<ShowHintAnim>d__16",
+"method": "AnimateHintIn",
+"table": 23847,
+"func": 115448
+},
+{
+"rid": 461,
+"type": "<ShowHintAnim>d__16",
+"method": "ShowHintAnim",
+"table": 23848,
+"func": 115449
+},
+{
+"rid": 462,
+"type": "<ShowHintAnim>d__16",
+"method": "AnimateHintOut",
+"table": 23849,
+"func": 115450
+},
+{
+"rid": 463,
+"type": "<ShowHintAnim>d__16",
+"method": "AnimateHintHide",
+"table": 23850,
+"func": 115451
+},
+{
+"rid": 464,
+"type": "<ShowHintAnim>d__16",
+"method": "TutorialComplete",
+"table": 23851,
+"func": 115452
+},
+{
+"rid": 465,
+"type": "MpTutorialController",
+"method": "ShowHintText",
+"table": 23852,
+"func": 115453
+},
+{
+"rid": 466,
+"type": "MpTutorialController",
+"method": ".ctor",
+"table": 23853,
+"func": 115454
+},
+{
+"rid": 467,
+"type": "MpTutorialController",
+"method": ".ctor",
+"table": 23854,
+"func": 4396
+},
+{
+"rid": 468,
+"type": "MpTutorialController",
+"method": "System.IDisposable.Dispose",
+"table": 23855,
+"func": 735
+},
+{
+"rid": 469,
+"type": "MpTutorialController",
+"method": "MoveNext",
+"table": 23856,
+"func": 115455
+},
+{
+"rid": 470,
+"type": "MpTutorialController",
+"method": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+"table": 23857,
+"func": 4381
+},
+{
+"rid": 471,
+"type": "MpTutorialController",
+"method": "System.Collections.IEnumerator.Reset",
+"table": 23858,
+"func": 115456
+},
+{
+"rid": 472,
+"type": "MpTutorialController",
+"method": "System.Collections.IEnumerator.get_Current",
+"table": 23859,
+"func": 4381
+},
+{
+"rid": 473,
+"type": "MpTutorialController",
+"method": ".ctor",
+"table": 23860,
+"func": 4396
+},
+{
+"rid": 474,
+"type": "MpTutorialController",
+"method": "System.IDisposable.Dispose",
+"table": 23861,
+"func": 735
+},
+{
+"rid": 475,
+"type": "MpTutorialController",
+"method": "MoveNext",
+"table": 23862,
+"func": 115457
+},
+{
+"rid": 476,
+"type": "MpTutorialController",
+"method": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+"table": 23863,
+"func": 4381
+},
+{
+"rid": 477,
+"type": "MpTutorialController",
+"method": "System.Collections.IEnumerator.Reset",
+"table": 23864,
+"func": 115458
+},
+{
+"rid": 478,
+"type": "MpTutorialController",
+"method": "System.Collections.IEnumerator.get_Current",
+"table": 23865,
+"func": 4381
+},
+{
+"rid": 479,
+"type": "MpTutorialNote",
+"method": ".cctor",
+"table": 23866,
+"func": 115459
+},
+{
+"rid": 480,
+"type": "<ShowBottomButton>d__4",
+"method": "OnStartStep",
+"table": 23867,
+"func": 115460
+},
+{
+"rid": 481,
+"type": "<ShowBottomButton>d__4",
+"method": "ShowBottomButton",
+"table": 23868,
+"func": 115461
+},
+{
+"rid": 482,
+"type": "<ShowBottomButton>d__4",
+"method": "EndTrial",
+"table": 23869,
+"func": 115462
+},
+{
+"rid": 483,
+"type": "<ShowBottomButton>d__4",
+"method": "OnCancelStep",
+"table": 23870,
+"func": 115463
+},
+{
+"rid": 484,
+"type": "<ShowBottomButton>d__4",
+"method": "OnComplete",
+"table": 23871,
+"func": 735
+},
+{
+"rid": 485,
+"type": "<ShowBottomButton>d__4",
+"method": "CleanUp",
+"table": 23872,
+"func": 115464
+},
+{
+"rid": 486,
+"type": "TutorialTrialStep",
+"method": ".ctor",
+"table": 23873,
+"func": 115465
+},
+{
+"rid": 487,
+"type": "TutorialTrialStep",
+"method": ".ctor",
+"table": 23874,
+"func": 4396
+},
+{
+"rid": 488,
+"type": "TutorialTrialStep",
+"method": "System.IDisposable.Dispose",
+"table": 23875,
+"func": 735
+},
+{
+"rid": 489,
+"type": "TutorialTrialStep",
+"method": "MoveNext",
+"table": 23876,
+"func": 115466
+},
+{
+"rid": 490,
+"type": "TutorialTrialStep",
+"method": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+"table": 23877,
+"func": 4381
+},
+{
+"rid": 491,
+"type": "TutorialTrialStep",
+"method": "System.Collections.IEnumerator.Reset",
+"table": 23878,
+"func": 115467
+},
+{
+"rid": 492,
+"type": "TutorialTrialStep",
+"method": "System.Collections.IEnumerator.get_Current",
+"table": 23879,
+"func": 4381
+},
+{
+"rid": 493,
+"type": "TutorialTrialStep0",
+"method": "OnStartStep",
+"table": 23880,
+"func": 115468
+},
+{
+"rid": 494,
+"type": "TutorialTrialStep0",
+"method": "EndTrial",
+"table": 23881,
+"func": 115469
+},
+{
+"rid": 495,
+"type": "TutorialTrialStep0",
+"method": "OnCancelStep",
+"table": 23882,
+"func": 115470
+},
+{
+"rid": 496,
+"type": "TutorialTrialStep0",
+"method": "OnComplete",
+"table": 23883,
+"func": 735
+},
+{
+"rid": 497,
+"type": "TutorialTrialStep0",
+"method": "CleanUp",
+"table": 23884,
+"func": 115471
+},
+{
+"rid": 498,
+"type": "TutorialTrialStep0",
+"method": ".ctor",
+"table": 23885,
+"func": 115472
+},
+{
+"rid": 499,
+"type": "<ShowBottomButton>d__7",
+"method": "OnStartStep",
+"table": 23886,
+"func": 115473
+},
+{
+"rid": 500,
+"type": "<ShowBottomButton>d__7",
+"method": "HandleAspectChanged",
+"table": 23887,
+"func": 115474
+},
+{
+"rid": 501,
+"type": "<ShowBottomButton>d__7",
+"method": "ShowHandAnimation",
+"table": 23888,
+"func": 115476
+},
+{
+"rid": 502,
+"type": "<ShowBottomButton>d__7",
+"method": "ShowBottomButton",
+"table": 23889,
+"func": 115475
+},
+{
+"rid": 503,
+"type": "<ShowBottomButton>d__7",
+"method": "EndTrial",
+"table": 23890,
+"func": 115477
+},
+{
+"rid": 504,
+"type": "<ShowBottomButton>d__7",
+"method": "OnCancelStep",
+"table": 23891,
+"func": 115478
+},
+{
+"rid": 505,
+"type": "TutorialTrialStep1",
+"method": "OnComplete",
+"table": 23892,
+"func": 735
+},
+{
+"rid": 506,
+"type": "TutorialTrialStep1",
+"method": "CleanUp",
+"table": 23893,
+"func": 115479
+},
+{
+"rid": 507,
+"type": "TutorialTrialStep1",
+"method": ".ctor",
+"table": 23894,
+"func": 115480
+},
+{
+"rid": 508,
+"type": "TutorialTrialStep1",
+"method": ".ctor",
+"table": 23895,
+"func": 4396
+},
+{
+"rid": 509,
+"type": "TutorialTrialStep1",
+"method": "System.IDisposable.Dispose",
+"table": 23896,
+"func": 735
+},
+{
+"rid": 510,
+"type": "TutorialTrialStep1",
+"method": "MoveNext",
+"table": 23897,
+"func": 115481
+},
+{
+"rid": 511,
+"type": "TutorialTrialStep1",
+"method": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+"table": 23898,
+"func": 4381
+},
+{
+"rid": 512,
+"type": "TutorialTrialStep1",
+"method": "System.Collections.IEnumerator.Reset",
+"table": 23899,
+"func": 115482
+},
+{
+"rid": 513,
+"type": "TutorialTrialStep1",
+"method": "System.Collections.IEnumerator.get_Current",
+"table": 23900,
+"func": 4381
+},
+{
+"rid": 514,
+"type": "<ShowBottomButton>d__5",
+"method": "OnStartStep",
+"table": 23901,
+"func": 115483
+},
+{
+"rid": 515,
+"type": "<ShowBottomButton>d__5",
+"method": "ShowBottomButton",
+"table": 23902,
+"func": 115484
+},
+{
+"rid": 516,
+"type": "<ShowBottomButton>d__5",
+"method": "EndTrial",
+"table": 23903,
+"func": 115485
+},
+{
+"rid": 517,
+"type": "<ShowBottomButton>d__5",
+"method": "TutorialEnd",
+"table": 23904,
+"func": 115486
+},
+{
+"rid": 518,
+"type": "<ShowBottomButton>d__5",
+"method": "OnCancelStep",
+"table": 23905,
+"func": 115487
+},
+{
+"rid": 519,
+"type": "<ShowBottomButton>d__5",
+"method": "OnComplete",
+"table": 23906,
+"func": 735
+},
+{
+"rid": 520,
+"type": "<TutorialEnd>d__7",
+"method": "CleanUp",
+"table": 23907,
+"func": 115488
+},
+{
+"rid": 521,
+"type": "<TutorialEnd>d__7",
+"method": ".ctor",
+"table": 23908,
+"func": 115465
+},
+{
+"rid": 522,
+"type": "<TutorialEnd>d__7",
+"method": ".ctor",
+"table": 23909,
+"func": 4396
+},
+{
+"rid": 523,
+"type": "<TutorialEnd>d__7",
+"method": "System.IDisposable.Dispose",
+"table": 23910,
+"func": 735
+},
+{
+"rid": 524,
+"type": "<TutorialEnd>d__7",
+"method": "MoveNext",
+"table": 23911,
+"func": 115489
+},
+{
+"rid": 525,
+"type": "<TutorialEnd>d__7",
+"method": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+"table": 23912,
+"func": 4381
+},
+{
+"rid": 526,
+"type": "TutorialTrialStepLast",
+"method": "System.Collections.IEnumerator.Reset",
+"table": 23913,
+"func": 115490
+},
+{
+"rid": 527,
+"type": "TutorialTrialStepLast",
+"method": "System.Collections.IEnumerator.get_Current",
+"table": 23914,
+"func": 4381
+},
+{
+"rid": 528,
+"type": "TutorialTrialStepLast",
+"method": ".ctor",
+"table": 23915,
+"func": 4396
+},
+{
+"rid": 529,
+"type": "TutorialTrialStepLast",
+"method": "System.IDisposable.Dispose",
+"table": 23916,
+"func": 735
+},
+{
+"rid": 530,
+"type": "TutorialTrialStepLast",
+"method": "MoveNext",
+"table": 23917,
+"func": 115491
+},
+{
+"rid": 531,
+"type": "TutorialTrialStepLast",
+"method": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+"table": 23918,
+"func": 4381
+},
+{
+"rid": 532,
+"type": "TutorialTrialStepLast",
+"method": "System.Collections.IEnumerator.Reset",
+"table": 23919,
+"func": 115492
+},
+{
+"rid": 533,
+"type": "TutorialTrialStepLast",
+"method": "System.Collections.IEnumerator.get_Current",
+"table": 23920,
+"func": 4381
+},
+{
+"rid": 534,
+"type": "MasterPieceStates",
+"method": "Initialize",
+"table": 23921,
+"func": 115493
+},
+{
+"rid": 535,
+"type": "MasterPieceStates",
+"method": "RegisterNotifications",
+"table": 23922,
+"func": 115495
+},
+{
+"rid": 536,
+"type": "MasterPieceStates",
+"method": "HandleEnterState",
+"table": 23923,
+"func": 115496
+},
+{
+"rid": 537,
+"type": "MasterPieceStates",
+"method": "HandleAspectChanged",
+"table": 23924,
+"func": 115494
+},
+{
+"rid": 538,
+"type": "MasterPieceStates",
+"method": "SetupPortrait",
+"table": 23925,
+"func": 115498
+},
+{
+"rid": 539,
+"type": "MasterPieceStates",
+"method": "SetupLandscape",
+"table": 23926,
+"func": 115497
+},
+{
+"rid": 540,
+"type": "MasterPieceStates",
+"method": ".ctor",
+"table": 23927,
+"func": 19569
+}
+]

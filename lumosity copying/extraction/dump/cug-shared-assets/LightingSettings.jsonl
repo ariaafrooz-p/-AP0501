@@ -1,0 +1,1 @@
+{"path_id": 8644605472997137203, "type": "LightingSettings", "name": "DefaultLightingSettings", "data": {"m_Name": "DefaultLightingSettings", "m_EnableBakedLightmaps": false, "m_EnableRealtimeLightmaps": false, "m_RealtimeEnvironmentLighting": true, "m_BounceScale": 1.0, "m_AlbedoBoost": 1.0, "m_IndirectOutputScale": 1.0, "m_UsingShadowmask": true}}
