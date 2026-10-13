@@ -1,0 +1,36 @@
+D:\coding\-AP0501>cd Assignments
+
+D:\coding\-AP0501\Assignments>python test_driver.py
+test_behavior_1_position_after_delivery (__main__.TestDriver) ... FAIL
+test_behavior_2_company_share (__main__.TestDriver) ... FAIL
+test_boundary_or_error (__main__.TestDriver) ... ok
+test_driver_share_and_status (__main__.TestDriver) ... ok
+test_initial_state (__main__.TestDriver) ... ok
+
+======================================================================
+FAIL: test_behavior_1_position_after_delivery (__main__.TestDriver)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\coding\-AP0501\Assignments\test_driver.py", line 80, in test_behavior_1_position_after_delivery
+    self.assertEqual(position, (3, 7))
+AssertionError: Tuples differ: (7, 3) != (3, 7)
+
+First differing element 0:
+7
+3
+
+- (7, 3)
++ (3, 7)
+
+======================================================================
+FAIL: test_behavior_2_company_share (__main__.TestDriver)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\coding\-AP0501\Assignments\test_driver.py", line 88, in test_behavior_2_company_share
+    self.assertEqual(Driver.company_credit, Decimal('20'))
+AssertionError: Decimal('10.0') != Decimal('20')
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.002s
+
+FAILED (failures=2)
